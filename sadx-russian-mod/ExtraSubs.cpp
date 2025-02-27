@@ -5,7 +5,6 @@
 
 
 FunctionHook<int, int, void*, int, void*> PlaySound_Hook(0x423D70);
-FunctionPointer(void, sub_40BC80, (), 0x40BC80);
 
 const char* Buffer[] = { NULL, NULL };
 const char* TextBuffer = NULL;
@@ -912,8 +911,8 @@ void InitExtraSubs()
 {
 	WriteJump((void*)0x425710, PlayVoice_ExtraSub);
 	PlaySound_Hook.Hook(PlaySound_ExtraSub);
-	WriteData((char*)0x40BC9A, (char)52); //меняю высоту текст-бокса для меню, чтобы влезало 2 строки нормально
-	WriteData((int*)0x40BCA1, 384); //меняю координату y для текст-бокса, чтобы для обоих методов вывода их размеры и расположение совпадали
+	WriteData((char*)0x40BC9A, (char)52);	// меняю высоту текст-бокса для меню, чтобы влезало 2 строки нормально
+	WriteData((int*)0x40BCA1, 384);			// меняю координату y для текст-бокса, чтобы для обоих методов вывода их размеры и расположение совпадали
 }
 
 
@@ -921,8 +920,8 @@ void InitExtraSubs()
 
 void DisplaySubtitleForOneFrame()
 {
-	sub_40BC80();
-	DoSomethingRelatedToText_(TextBuffer);
+	DialogJimakuInit();
+	DialogJimakuPut(TextBuffer);
 	SubtitleDisplayFrameCount++;
 }
 
@@ -935,26 +934,26 @@ void ClearSubtitle()
 
 void DisplayEggCannonSubtitles()
 {
-	sub_40BC80();
+	DialogJimakuInit();
 	if (EggCannonFrameCount <= 180)
 	{
-		DoSomethingRelatedToText_(SkyChase1EggCannon[0]);
+		DialogJimakuPut(SkyChase1EggCannon[0]);
 	}
 	else if (EggCannonFrameCount <= 270)
 	{
-		DoSomethingRelatedToText_(SkyChase1EggCannon[1]);
+		DialogJimakuPut(SkyChase1EggCannon[1]);
 	}
 	else if (EggCannonFrameCount > 360 && EggCannonFrameCount <= 480)
 	{
-		DoSomethingRelatedToText_(SkyChase1EggCannon[2]);
+		DialogJimakuPut(SkyChase1EggCannon[2]);
 	}
 	else if (EggCannonFrameCount > 660 && EggCannonFrameCount <= 780)
 	{
-		DoSomethingRelatedToText_(SkyChase1EggCannon[3]);
+		DialogJimakuPut(SkyChase1EggCannon[3]);
 	}
 	else if (EggCannonFrameCount > 780)
 	{
-		DoSomethingRelatedToText_(SkyChase1EggCannon[4]);
+		DialogJimakuPut(SkyChase1EggCannon[4]);
 	}
 	EggCannonFrameCount++;
 }

@@ -5,6 +5,7 @@
 FunctionPointer(char, AvaSetTextSettei, (char language), 0x5068C0);
 FunctionPointer(char, AvaSetVoiceSettei, (char language), 0x506870);
 FunctionPointer(int, AvaSaveFiles, (), 0x5065E0);
+FunctionPointer(void, dsVMSLoadGame, (), 0x421DE0);
 
 
 // Вся эта дичь буквально ради того, чтобы скипнуть за ненадобностью диалог с выбором языка текста и форсировать французский язык текста, на месте которого мы выводим русский
@@ -40,8 +41,14 @@ void SetLanguagesOnNewSave()
 	WriteCall((void*)0x503787, SetLanguagesAndSaveFile);
 }
 
+void AvaLoadFiles_SetFrench()
+{
+	dsVMSLoadGame();
+	AvaSetTextSettei(Languages_French);
+}
 
-// Это делается ради того, чтобы сразу при запуске игры стоял французский, независимо от настроек мод-менеджера
+
+// Это делается ради того, чтобы сразу при запуске игры стоял французский, независимо от настроек мод-менеджера (идёт в OnFrame, потому что установка языка в Init не делает ничего)
 
 bool FrenchInit = false;
 void SetFrenchTextAtLaunch() 
@@ -57,4 +64,5 @@ void InitLanguageSetting()
 {
 	SkipTextLanguageSelectionAndSetFrench();
 	SetLanguagesOnNewSave();
+	WriteJump((void*)0x506600, AvaLoadFiles_SetFrench);
 }
