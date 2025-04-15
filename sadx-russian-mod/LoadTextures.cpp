@@ -232,12 +232,19 @@ void LoadEmblemChallengeTextures(const char* path, const HelperFunctions& helper
 	ReplaceTex("AVA_EMBLEMVIEW_E", "select_big", "modsCompatibility\\EmblemChallenge", "sonic_c", 10000622, 128, 16);
 }
 
-void LoadTGSSelectors(const HelperFunctions& helperFunctions)
+void LoadRingRushMenuTexture(const char* path, const HelperFunctions& helperFunctions)
+{
+	ReplaceTex("AVA_TITLE_E", "main_tx_ringrush_e", "modsCompatibility\\RingRush", "main_tx_ringrush_e", 97405, 128, 16);
+}
+
+void LoadTGSSelectors(const char* path, const HelperFunctions& helperFunctions)
 {
 	if (Config::TGS_Selectors == "TGS")
 	{
 		ReplaceTexPVM("B_CHNAM_E", "B_CHNAM_E_TGS");
 		ReplaceTexPVM("AVA_METAL_SONIC", "AVA_METAL_SONIC_TGS");
+
+		ReplaceTex("Charsel", "Nameplate_B", "modsCompatibility\\Mario", "Nameplate_B TGS", 0, 512, 64);
 	}
 	else if (Config::TGS_Selectors == "Vanilla")
 	{
@@ -293,7 +300,7 @@ void LoadTextures(const char* path, const HelperFunctions& helperFunctions)
 	LoadStageMissionPVRs(path, helperFunctions);
 	LoadCommonPVRs(path, helperFunctions);
 	LoadTutorials(helperFunctions);
-	LoadTGSSelectors(helperFunctions);
+	LoadTGSSelectors(path, helperFunctions);
 
 	ReplaceTexPVM_HD_Rus("GG_TEXLIST_FR");
 	if (Config::AltGGHelp)
@@ -314,5 +321,6 @@ void LoadTextures(const char* path, const HelperFunctions& helperFunctions)
 	if (LoadedMods::DreamcastConversion)
 	{
 		ReplaceTex("PRESSSTART", "hyoji_pressstart", "config\\startButton\\demo", "start_dc", 5000900, 256, 32);
+		LoadRingRushMenuTexture(path, helperFunctions);
 	};
 }
