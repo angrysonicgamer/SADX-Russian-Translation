@@ -298,7 +298,7 @@ void EnableObjTex(const char* path, const HelperFunctions& helperFunctions)
 	ReplaceTex("ADVSS01", "casinom_kanban", "config\\objTex\\advss01", "casinom_kanban", 169, 128, 128);
 	ReplaceTex("ADVSS01", "denkou", "config\\objTex\\advss01", "denkou", 218, 128, 128);
 
-	if (!LoadedMods::DreamcastConversion)
+	if (LoadedMods::DreamcastConversion)
 	{
 		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02_dc", 169, 128, 128);
 	}
@@ -309,7 +309,6 @@ void EnableObjTex(const char* path, const HelperFunctions& helperFunctions)
 	ReplaceTex("ADVSS03", "oda_ekiname02", "config\\objTex\\advss03", "oda_ekiname02", 151, 128, 128);
 	ReplaceTex("ADVSS03", "oda_ss_tex20", "config\\objTex\\advss03", "oda_ss_tex20", 57, 128, 128);
 	ReplaceTex("ADVSS03", "ss_kiosk10", "config\\objTex\\advss03", "ss_kiosk10", 167, 64, 64);
-	ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02", 218, 128, 128);
 	ReplaceTex("ADVSS03", "ss_tex_60", "config\\objTex\\advss03", "ss_tex_60", 36, 128, 128);
 
 	ReplaceTex("OBJ_SS", "circuit02", "config\\objTex\\obj_ss", "circuit02", 206600, 128, 128);
