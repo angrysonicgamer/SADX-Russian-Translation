@@ -292,7 +292,7 @@ void LoadDreamcastChaoIcon(const char* path, const HelperFunctions& helperFuncti
 	ReplaceTex("AL_DX_OBJ_CMN", "al_ws12", "config\\chaoPortalsIcons", "stationSquare_dc", 1100080, 128, 128);
 }
 
-void EnableObjTex(const char* path, const HelperFunctions& helperFunctions)
+void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 {
 	ReplaceTex("ADVSS01", "chaoinspace", "config\\objTex\\advss01", "chaoinspace", 209, 128, 128);
 	ReplaceTex("ADVSS01", "casinom_kanban", "config\\objTex\\advss01", "casinom_kanban", 169, 128, 128);
@@ -343,7 +343,7 @@ void LoadTextures(const char* path, const HelperFunctions& helperFunctions)
 
 	if (Config::EnableObjTextures)
 	{
-		EnableObjTex(path, helperFunctions);
+		LoadObjTex(path, helperFunctions);
 	}
 
 	if (LoadedMods::EmblemChallenge)
