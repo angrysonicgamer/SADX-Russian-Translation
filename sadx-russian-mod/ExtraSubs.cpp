@@ -288,7 +288,7 @@ std::map<int, SubtitleData> ExtraSubs
 
 	//Station Square - casino area / station
 
-	{ 280, { "\aОй-ой. Сейчас не время для веселья.", 180, Gameplay } }, //Sonic
+	{ 280, { "\aОй-ой. Сейчас не до веселья.", 180, Gameplay } }, //Sonic
 	{ 281, { "\aКакой большой город!", 120, Gameplay } }, //Tails
 	{ 282, { "\aКакой оживлённый город.", 150, Gameplay } }, //Knuckles
 	{ 283, { "\aЭтот город вообще не меняется...", 180, Gameplay } }, //Amy

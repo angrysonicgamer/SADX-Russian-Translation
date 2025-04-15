@@ -292,6 +292,35 @@ void LoadDreamcastChaoIcon(const char* path, const HelperFunctions& helperFuncti
 	ReplaceTex("AL_DX_OBJ_CMN", "al_ws12", "config\\chaoPortalsIcons", "stationSquare_dc", 1100080, 128, 128);
 }
 
+void EnableObjTex(const char* path, const HelperFunctions& helperFunctions)
+{
+	ReplaceTex("ADVSS01", "chaoinspace", "config\\objTex\\advss01", "chaoinspace", 209, 128, 128);
+	ReplaceTex("ADVSS01", "casinom_kanban", "config\\objTex\\advss01", "casinom_kanban", 169, 128, 128);
+	ReplaceTex("ADVSS01", "denkou", "config\\objTex\\advss01", "denkou", 218, 128, 128);
+
+	if (!LoadedMods::DreamcastConversion)
+	{
+		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02_dc", 169, 128, 128);
+	}
+	else
+	{
+		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02", 169, 128, 128);
+	}
+	ReplaceTex("ADVSS03", "oda_ekiname02", "config\\objTex\\advss03", "oda_ekiname02", 151, 128, 128);
+	ReplaceTex("ADVSS03", "oda_ss_tex20", "config\\objTex\\advss03", "oda_ss_tex20", 57, 128, 128);
+	ReplaceTex("ADVSS03", "ss_kiosk10", "config\\objTex\\advss03", "ss_kiosk10", 167, 64, 64);
+	ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02", 218, 128, 128);
+	ReplaceTex("ADVSS03", "ss_tex_60", "config\\objTex\\advss03", "ss_tex_60", 36, 128, 128);
+
+	ReplaceTex("OBJ_SS", "circuit02", "config\\objTex\\obj_ss", "circuit02", 206600, 128, 128);
+	ReplaceTex("OBJ_SS", "exit6", "config\\objTex\\obj_ss", "exit6", 206584, 64, 64);
+	ReplaceTex("OBJ_SS", "twkanbanmoji01", "config\\objTex\\obj_ss", "twkanbanmoji01", 206349, 128, 128);
+	ReplaceTex("OBJ_SS", "twkanbanmoji04", "config\\objTex\\obj_ss", "twkanbanmoji04", 206347, 64, 64);
+
+	ReplaceTex("SS_TWINS", "circuit02", "config\\objTex\\ss_twins", "circuit02", 204751, 128, 128);
+	ReplaceTex("SS_TWINS", "park4", "config\\objTex\\ss_twins", "park4", 204750, 128, 128);
+}
+
 
 void LoadTextures(const char* path, const HelperFunctions& helperFunctions)
 {
@@ -301,7 +330,7 @@ void LoadTextures(const char* path, const HelperFunctions& helperFunctions)
 	LoadCommonPVRs(path, helperFunctions);
 	LoadTutorials(helperFunctions);
 	LoadTGSSelectors(path, helperFunctions);
-
+	
 	ReplaceTexPVM_HD_Rus("GG_TEXLIST_FR");
 	if (Config::AltGGHelp)
 	{
@@ -311,6 +340,11 @@ void LoadTextures(const char* path, const HelperFunctions& helperFunctions)
 	if (Config::DreamcastChaoIcon == "DC")
 	{
 		LoadDreamcastChaoIcon(path, helperFunctions);
+	}
+
+	if (Config::EnableObjTextures)
+	{
+		EnableObjTex(path, helperFunctions);
 	}
 
 	if (LoadedMods::EmblemChallenge)

@@ -51,6 +51,7 @@ bool Config::DisplaySESubtitles;
 std::string Config::DreamcastChaoIcon;
 std::string Config::AltSonicTeamLogo;
 bool Config::AltGGHelp;
+bool Config::EnableObjTextures;
 
 
 void Config::Read(const char* path)
@@ -71,6 +72,7 @@ void Config::Read(const char* path)
 	DreamcastChaoIcon = config->getString("Extra", "DreamcastChaoIcon", "DX");	
 	AltSonicTeamLogo = config->getString("Extra", "ExtraSonicTeamLogo", "Disable");
 	AltGGHelp = config->getBool("Extra", "ExtraGGHelp", false);
+	EnableObjTextures = config->getBool("Extra", "EnableObjTextures", false);
 
 	delete config;
 }

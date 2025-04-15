@@ -17,6 +17,7 @@ public:
 	static std::string DreamcastChaoIcon;
 	static std::string AltSonicTeamLogo;
 	static bool AltGGHelp;
+	static bool EnableObjTextures;
 
 	static void Read(const char* path);
 	static void Init(const char* path, const HelperFunctions& helperFunctions);
