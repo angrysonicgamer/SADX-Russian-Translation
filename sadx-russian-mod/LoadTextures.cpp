@@ -337,6 +337,7 @@ void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 
 	ReplaceTex("CASINO04", "card_t_nights01", "config\\objTex\\casino04", "card_t_nights01", 11, 256, 256);
 
+	///Первый блок - текстуры карточек на игровом поле (которые нужно соником собирать)
 	ReplaceTex("OBJ_CASINO_E", "cd_wize", "config\\objTex\\obj_casino_e", "cd_wize", 99027, 64, 64);
 	ReplaceTex("OBJ_CASINO_E", "cd_reala", "config\\objTex\\obj_casino_e", "cd_reala", 99042, 64, 64);
 	ReplaceTex("OBJ_CASINO_E", "cd_pian", "config\\objTex\\obj_casino_e", "cd_pian", 99043, 64, 64);
@@ -348,7 +349,9 @@ void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 	ReplaceTex("OBJ_CASINO_E", "cd_claris", "config\\objTex\\obj_casino_e", "cd_claris", 99049, 64, 64);
 	ReplaceTex("OBJ_CASINO_E", "cd_blue", "config\\objTex\\obj_casino_e", "cd_blue", 99050, 64, 64);
 
-	ReplaceTex("OBJ_CASINO2", "cd_nights", "config\\objTex\\obj_casino2", "cd_nights", 99045, 64, 64);
+	///Этот блок - попытка подмены текстур карточек из бокового меню (когда ты подбираешь карточку,
+	///она появляется справа на затенённой панели). Индексы взяты из оригинальной PVM-ки ДХ-версии
+	/*ReplaceTex("OBJ_CASINO2", "cd_nights", "config\\objTex\\obj_casino2", "cd_nights", 99045, 64, 64);
 	ReplaceTex("OBJ_CASINO2", "cd_elliot", "config\\objTex\\obj_casino2", "cd_elliot", 99048, 64, 64);
 	ReplaceTex("OBJ_CASINO2", "cd_claris", "config\\objTex\\obj_casino2", "cd_claris", 99049, 64, 64);
 	ReplaceTex("OBJ_CASINO2", "cd_pian", "config\\objTex\\obj_casino2", "cd_pian", 99043, 64, 64);
@@ -358,17 +361,30 @@ void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 	ReplaceTex("OBJ_CASINO2", "cd_gill", "config\\objTex\\obj_casino2", "cd_gill", 99047, 64, 64);
 	ReplaceTex("OBJ_CASINO2", "cd_reala", "config\\objTex\\obj_casino2", "cd_reala", 99202, 64, 64);
 	ReplaceTex("OBJ_CASINO2", "cd_jackle", "config\\objTex\\obj_casino2", "cd_jackle", 99042, 64, 64);
-
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_nights", "config\\objTex\\obj_casino2", "cd_nights", 99199, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_elliot", "config\\objTex\\obj_casino2", "cd_elliot", 99196, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_claris", "config\\objTex\\obj_casino2", "cd_claris", 99195, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_pian", "config\\objTex\\obj_casino2", "cd_pian", 99201, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_blue", "config\\objTex\\obj_casino2", "cd_blue", 99194, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_paffy", "config\\objTex\\obj_casino2", "cd_paffy", 99200, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_wize", "config\\objTex\\obj_casino2", "cd_wize", 99203, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_gill", "config\\objTex\\obj_casino2", "cd_gill", 99197, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_reala", "config\\objTex\\obj_casino2", "cd_reala", 99202, 64, 64);
-	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_jackle", "config\\objTex\\obj_casino2", "cd_jackle", 99198, 64, 64);
+	
+	///Этот блок - аналогичен прошлому, но индексы взяты из архива для ДС Конверсии
+	/*ReplaceTex("OBJ_CASINO2", "cd_nights", "config\\objTex\\obj_casino2", "cd_nights", 99199, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_elliot", "config\\objTex\\obj_casino2", "cd_elliot", 99196, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_claris", "config\\objTex\\obj_casino2", "cd_claris", 99195, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_pian", "config\\objTex\\obj_casino2", "cd_pian", 99201, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_blue", "config\\objTex\\obj_casino2", "cd_blue", 99194, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_paffy", "config\\objTex\\obj_casino2", "cd_paffy", 99200, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_wize", "config\\objTex\\obj_casino2", "cd_wize", 99203, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_gill", "config\\objTex\\obj_casino2", "cd_gill", 99197, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_reala", "config\\objTex\\obj_casino2", "cd_reala", 99202, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_jackle", "config\\objTex\\obj_casino2", "cd_jackle", 99198, 64, 64);*/
+	
+	///А ЭТОТ БЛОК - РАБОЧИЙ НАХУЙ ВАРИАНТ С ИНДЕКСАМИ ИЗ PVM в БЕТА РЕСТОРЕ
+	ReplaceTex("OBJ_CASINO2", "cd_nights", "config\\objTex\\obj_casino2", "cd_nights", 199045, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_elliot", "config\\objTex\\obj_casino2", "cd_elliot", 199048, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_claris", "config\\objTex\\obj_casino2", "cd_claris", 199049, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_pian", "config\\objTex\\obj_casino2", "cd_pian", 199043, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_blue", "config\\objTex\\obj_casino2", "cd_blue", 199050, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_paffy", "config\\objTex\\obj_casino2", "cd_paffy", 199044, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_wize", "config\\objTex\\obj_casino2", "cd_wize", 199027, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_gill", "config\\objTex\\obj_casino2", "cd_gill", 199047, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_reala", "config\\objTex\\obj_casino2", "cd_reala", 199042, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_jackle", "config\\objTex\\obj_casino2", "cd_jackle", 199046, 64, 64);
 
 	ReplaceTex("OBJ_SKYDECK", "sky_t_warning", "config\\objTex\\obj_skydeck", "sky_t_warning", 62265, 64, 64);
 	ReplaceTex("OBJ_SKYDECK", "sky_t_danger", "config\\objTex\\obj_skydeck", "sky_t_danger", 62261, 64, 64);
