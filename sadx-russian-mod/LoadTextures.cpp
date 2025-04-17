@@ -294,6 +294,13 @@ void LoadDreamcastChaoIcon(const char* path, const HelperFunctions& helperFuncti
 
 void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 {
+	ReplaceTex("ADVSS00", "du64pos01", "config\\objTex\\advss00", "du64pos01", 108, 64, 64);
+	ReplaceTex("ADVSS00", "du64pos04", "config\\objTex\\advss00", "du64pos04", 103, 64, 64);
+	ReplaceTex("ADVSS00", "mark_cityoffice", "config\\objTex\\advss00", "mark_cityoffice", 116, 64, 64);
+	ReplaceTex("ADVSS00", "ss_kanban3", "config\\objTex\\advss00", "ss_kanban3", 15, 64, 64);
+	ReplaceTex("ADVSS00", "ss_kanban4", "config\\objTex\\advss00", "ss_kanban4", 17, 64, 64);
+	ReplaceTex("ADVSS00", "st1_1", "config\\objTex\\advss00", "st1_1", 16, 64, 64);
+	
 	ReplaceTex("ADVSS01", "chaoinspace", "config\\objTex\\advss01", "chaoinspace", 209, 128, 128);
 	ReplaceTex("ADVSS01", "casinom_kanban", "config\\objTex\\advss01", "casinom_kanban", 169, 128, 128);
 	ReplaceTex("ADVSS01", "denkou", "config\\objTex\\advss01", "denkou", 218, 128, 128);
@@ -307,6 +314,7 @@ void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02", 169, 128, 128);
 	}
 	ReplaceTex("ADVSS03", "oda_ekiname02", "config\\objTex\\advss03", "oda_ekiname02", 151, 128, 128);
+	ReplaceTex("ADVSS03", "oda_ss_pos01", "config\\objTex\\advss00", "du64pos01", 109, 64, 64);
 	ReplaceTex("ADVSS03", "oda_ss_tex20", "config\\objTex\\advss03", "oda_ss_tex20", 57, 128, 128);
 	ReplaceTex("ADVSS03", "ss_kiosk10", "config\\objTex\\advss03", "ss_kiosk10", 167, 64, 64);
 	ReplaceTex("ADVSS03", "ss_tex_60", "config\\objTex\\advss03", "ss_tex_60", 36, 128, 128);
@@ -318,6 +326,52 @@ void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 
 	ReplaceTex("SS_TWINS", "circuit02", "config\\objTex\\ss_twins", "circuit02", 204751, 128, 128);
 	ReplaceTex("SS_TWINS", "park4", "config\\objTex\\ss_twins", "park4", 204750, 128, 128);
+
+	ReplaceTex("EC_TARAI", "edv_f_good", "config\\objTex\\ec_tarai", "edv_f_good", 214559, 64, 64);
+	ReplaceTex("EC_TARAI", "edv_f_mojie", "config\\objTex\\ec_tarai", "edv_f_mojie", 214568, 64, 64);
+	ReplaceTex("EC_TARAI", "edv_f_mojig", "config\\objTex\\ec_tarai", "edv_f_mojig", 214565, 64, 64);
+	ReplaceTex("EC_TARAI", "edv_f_mojin", "config\\objTex\\ec_tarai", "edv_f_mojin", 214567, 64, 64);
+
+	ReplaceTex("CASINO01", "cas_map", "config\\objTex\\casino01", "cas_map", 97, 128, 128);
+	ReplaceTex("CASINO01", "oda_tex13", "config\\objTex\\casino01", "oda_tex13", 61, 128, 128);
+
+	ReplaceTex("CASINO04", "card_t_nights01", "config\\objTex\\casino04", "card_t_nights01", 11, 256, 256);
+
+	ReplaceTex("OBJ_CASINO_E", "cd_wize", "config\\objTex\\obj_casino_e", "cd_wize", 99027, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_reala", "config\\objTex\\obj_casino_e", "cd_reala", 99042, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_pian", "config\\objTex\\obj_casino_e", "cd_pian", 99043, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_paffy", "config\\objTex\\obj_casino_e", "cd_paffy", 99044, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_nights", "config\\objTex\\obj_casino_e", "cd_nights", 99045, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_jackle", "config\\objTex\\obj_casino_e", "cd_jackle", 99046, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_gill", "config\\objTex\\obj_casino_e", "cd_gill", 99047, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_elliot", "config\\objTex\\obj_casino_e", "cd_elliot", 99048, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_claris", "config\\objTex\\obj_casino_e", "cd_claris", 99049, 64, 64);
+	ReplaceTex("OBJ_CASINO_E", "cd_blue", "config\\objTex\\obj_casino_e", "cd_blue", 99050, 64, 64);
+
+	ReplaceTex("OBJ_CASINO2", "cd_nights", "config\\objTex\\obj_casino2", "cd_nights", 99045, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_elliot", "config\\objTex\\obj_casino2", "cd_elliot", 99048, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_claris", "config\\objTex\\obj_casino2", "cd_claris", 99049, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_pian", "config\\objTex\\obj_casino2", "cd_pian", 99043, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_blue", "config\\objTex\\obj_casino2", "cd_blue", 99050, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_paffy", "config\\objTex\\obj_casino2", "cd_paffy", 99044, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_wize", "config\\objTex\\obj_casino2", "cd_wize", 99027, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_gill", "config\\objTex\\obj_casino2", "cd_gill", 99047, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_reala", "config\\objTex\\obj_casino2", "cd_reala", 99202, 64, 64);
+	ReplaceTex("OBJ_CASINO2", "cd_jackle", "config\\objTex\\obj_casino2", "cd_jackle", 99042, 64, 64);
+
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_nights", "config\\objTex\\obj_casino2", "cd_nights", 99199, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_elliot", "config\\objTex\\obj_casino2", "cd_elliot", 99196, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_claris", "config\\objTex\\obj_casino2", "cd_claris", 99195, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_pian", "config\\objTex\\obj_casino2", "cd_pian", 99201, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_blue", "config\\objTex\\obj_casino2", "cd_blue", 99194, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_paffy", "config\\objTex\\obj_casino2", "cd_paffy", 99200, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_wize", "config\\objTex\\obj_casino2", "cd_wize", 99203, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_gill", "config\\objTex\\obj_casino2", "cd_gill", 99197, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_reala", "config\\objTex\\obj_casino2", "cd_reala", 99202, 64, 64);
+	ReplaceTex("OBJ_CASINO2_DC.PVM", "cd_jackle", "config\\objTex\\obj_casino2", "cd_jackle", 99198, 64, 64);
+
+	ReplaceTex("OBJ_SKYDECK", "sky_t_warning", "config\\objTex\\obj_skydeck", "sky_t_warning", 62265, 64, 64);
+	ReplaceTex("OBJ_SKYDECK", "sky_t_danger", "config\\objTex\\obj_skydeck", "sky_t_danger", 62261, 64, 64);
 }
 
 

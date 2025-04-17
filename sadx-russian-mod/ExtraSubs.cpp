@@ -274,7 +274,7 @@ std::map<int, SubtitleData> ExtraSubs
 	{ 301, { "\aКажется, в парк мне не попасть.", 180, Gameplay } }, //Tails
 	{ 302, { "\aЭто ещё что за место?", 120, Gameplay } }, //Knuckles
 	{ 303, { "\aЯ аж в предвкушении!", 120, Gameplay } }, //Amy
-	{ 304, { "\aМерцающий парк?", 90, Gameplay } }, //Big
+	{ 304, { "\aЗвёздный парк?", 90, Gameplay } }, //Big
 	{ 305, { "\aОбнаружена трасса для картинга.", 180, Gameplay } }, //Gamma
 
 	//Station Square - hotel
@@ -639,7 +639,7 @@ std::map<int, SubtitleData> ExtraSubs
 
 	//Twinkle Park entrance
 
-	{ 1575, { "\aДобро пожаловать в Мерцающий парк!", 180, Gameplay } },
+	{ 1575, { "\aДобро пожаловать в Звёздный парк!", 180, Gameplay } },
 
 	//Mystic Ruins
 
@@ -786,7 +786,7 @@ std::map<int, SubtitleData> ExtraSubs
 const char* SkyChase1EggCannon[] = { "\aДаже не думайте, что победили!",  "\aЭгг-пушка, к бою!", "\aОГОНЬ!", "\aА-а-а, в нас попали!", "\aА-а-а-а-а-а-а-а!" }; //id 187
 const char* SkyChase2Transformation[] = { "\aСмена режима!", "Ва-а-а-ау!", "\aВот так! А теперь вперёд!", NULL }; //id 2025
 
-const char* WelcomeToTwinkleParkCutscene[] = { "\aДобро пожаловать в Мерцающий парк!", NULL }; //для катсцены после Twinkle Park за Соника, чтобы этот субтитр не перекрыл субтитр из катсцены
+const char* WelcomeToTwinkleParkCutscene[] = { "\aДобро пожаловать в Звёздный парк!", NULL }; //для катсцены после Twinkle Park за Соника, чтобы этот субтитр не перекрыл субтитр из катсцены
 
 
 // Набор экстрасабов для фраз в звуковых эффектах (эксперимент)

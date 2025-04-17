@@ -21,10 +21,10 @@
 			</Property>			
 		</Group>
 		<Group name="ExtraSubtitles" display="Дополнительные субтитры">
-			<Property name="EnableExtraSubs" display="Включить дополнительные субтитры" type="bool" defaultvalue="True">
+			<Property name="EnableExtraSubs" display="Включить доп. субтитры" type="bool" defaultvalue="True">
 				<HelpText>Вы можете включить отображение субтитров на некоторые озвученные фразы, для которых изначально не было текста.</HelpText>
 			</Property>			
-			<Property name="DisableMenuExtraSubs" display="Не отображать дополнительные субтитры в меню" type="bool" defaultvalue="False">
+			<Property name="DisableMenuExtraSubs" display="Не отображать доп. субтитры в меню" type="bool" defaultvalue="False">
 				<HelpText>Вы можете отключить отображение дополнительных субтитров на экранах меню, если они вам мешают.</HelpText>
 			</Property>
 			<Property name="DisplaySESubtitles" display="Отображать субтитры для фраз в звуковых эффектах" type="bool" defaultvalue="False">
@@ -33,10 +33,13 @@
 		</Group>
 		<Group name="Extra" display="Дополнительно">
 			<Property name="DreamcastChaoIcon" display="Иконки садов Чао" type="ChaoIcon" defaultvalue="DX">
-				<HelpText>Изменение вида иконок&#x0a;на порталах в садах Чао.</HelpText>			
+				<HelpText>Изменение вида иконок&#x0a;на порталах в садах Чао.</HelpText>		
 			</Property>		
 			<Property name="ExtraGGHelp" display="Альт. подсказки GG" type="bool" defaultvalue="False">
 				<HelpText>Включение альтернативных подсказок для игр с Game Gear.</HelpText>	
+			</Property>
+			<Property name="EnableObjTextures" display="Текстуры окружения" type="bool" defaultvalue="False">
+				<HelpText>Включение перевода текстур окружения в хабах и на некоторых уровнях.</HelpText>
 			</Property>
 			<Property name="ExtraSonicTeamLogo" display="Альтернативный ролик Sonic Team" type="Color" defaultvalue="Disable">
 				<HelpText>Включение альтернативной анимации Sonic Team из Sonic Frontiers или Sonic Origins (работает при включённом Dreamcast Conversion).</HelpText>
