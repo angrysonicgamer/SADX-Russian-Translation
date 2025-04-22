@@ -1,0 +1,4 @@
+97300,00_GameOver.png,512x128
+97301,01_GameOver.png,512x128
+97302,02_GameOver.png,512x64
+97303,03_GameOver.png,512x64

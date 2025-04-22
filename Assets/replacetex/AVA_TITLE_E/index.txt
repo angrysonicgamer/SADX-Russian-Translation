@@ -11,3 +11,4 @@
 479462610,main_tx_multi_e.png,128x16
 479462611,main_tx_local_e.png,128x16
 479462612,main_tx_online_e.png,128x16
+97404,main_tx_ringrush_e.png,128x16

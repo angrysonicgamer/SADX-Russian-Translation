@@ -1,0 +1,6 @@
+97102,02_HUD-Text_HurryUp.png,512x128
+97103,03_HUD-Text_Ouch.png,512x128
+97104,04_HUD-Text_ExtraLife.png,512x128
+97105,05_HUD-Text_Drain.png,512x128
+97106,06_HUD-Text_Lives.png,512x128
+97116,16_HUD-Pause_Restart.png,1024x128
