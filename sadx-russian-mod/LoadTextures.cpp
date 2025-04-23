@@ -330,6 +330,10 @@ void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 	ReplaceTex("OBJ_SS", "exit6", "config\\objTex\\obj_ss", "exit6", 206584, 64, 64);
 	ReplaceTex("OBJ_SS", "twkanbanmoji01", "config\\objTex\\obj_ss", "twkanbanmoji01", 206349, 128, 128);
 	ReplaceTex("OBJ_SS", "twkanbanmoji04", "config\\objTex\\obj_ss", "twkanbanmoji04", 206347, 64, 64);
+	ReplaceTex("OBJ_SS", "min_pass9", "config\\objTex\\obj_ss", "min_pass9", 206555, 64, 64);
+
+	ReplaceTex("SS_KANBAN", "s1kan_d", "config\\objTex\\ss_kanban", "s1kan_d", 204600, 64, 64);
+	ReplaceTex("SS_KANBAN", "s1kan_n", "config\\objTex\\ss_kanban", "s1kan_n", 204602, 64, 64);
 
 	ReplaceTex("SS_TWINS", "circuit02", "config\\objTex\\ss_twins", "circuit02", 204751, 128, 128);
 	ReplaceTex("SS_TWINS", "park4", "config\\objTex\\ss_twins", "park4", 204750, 128, 128);
