@@ -84,13 +84,14 @@ void InitCustomCutsceneTimings(const char* path, const HelperFunctions& helperFu
 
 	if (Config::EditedCutsceneTimings)
 	{
+		helperFunctions.LoadEXEData((modpath + editedTimings).c_str(), modpath.c_str());
 		if (LoadedMods::TweakedCutscenes || LoadedMods::Cream || LoadedMods::Rouge)
 		{
+			//SetCustomCutsceneTimingsTweaked(path, helperFunctions);
 			DisplayMessage(CutsceneEditingModsMessage);
 		}
 		else
-		{
-			helperFunctions.LoadEXEData((modpath + editedTimings).c_str(), modpath.c_str());
+		{			
 			SetCustomCutsceneTimings(path, helperFunctions);
 		}
 	}
