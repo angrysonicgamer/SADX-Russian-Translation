@@ -338,6 +338,8 @@ void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 	ReplaceTex("SS_TWINS", "circuit02", "config\\objTex\\ss_twins", "circuit02", 204751, 128, 128);
 	ReplaceTex("SS_TWINS", "park4", "config\\objTex\\ss_twins", "park4", 204750, 128, 128);
 
+	ReplaceTex("ADV_MR00", "mr_128o_kbn02", "config\\objTex\\adv_mr00", "mr_128o_kbn02", 821034, 128, 128);
+
 	ReplaceTex("EC_TARAI", "edv_f_good", "config\\objTex\\ec_tarai", "edv_f_good", 214559, 64, 64);
 	ReplaceTex("EC_TARAI", "edv_f_mojie", "config\\objTex\\ec_tarai", "edv_f_mojie", 214568, 64, 64);
 	ReplaceTex("EC_TARAI", "edv_f_mojig", "config\\objTex\\ec_tarai", "edv_f_mojig", 214565, 64, 64);

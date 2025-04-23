@@ -706,7 +706,7 @@ std::map<int, SubtitleData> ExtraSubs
 	//Gamma
 
 	{ 1768, { "\aЗаезд завершён.", 90, Gameplay } }, //Twinkle Circuit clear
-	{ 1770, { "\aМиссия выполнена.", 90, Gameplay } }, //stage clear
+	{ 1770, { "\aЗадание выполнено.", 90, Gameplay } }, //stage clear
 	{ 1771, { "\aE-101 Бета: спасение завершено.", 180, Gameplay } }, //Beta mk.2 clear
 	{ 1772, { "\aПоимка лягушки завершена.", 150, Gameplay } }, //Emerald Coast clear
 	{ 1773, { "\aE-105 Дзета: спасение завершено.", 180, Gameplay } }, //Hot Shelter clear
