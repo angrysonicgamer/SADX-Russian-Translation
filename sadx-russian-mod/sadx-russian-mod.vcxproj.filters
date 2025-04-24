@@ -183,6 +183,9 @@
     <ClCompile Include="LanguageSetting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev000C_s_afterchaos4_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">

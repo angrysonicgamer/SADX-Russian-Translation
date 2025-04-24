@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev000C[] = {
+PVMEntry texTbl_ev000C_tw[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("CAPTUREBEAM"), &CAPTUREBEAM_TEXLIST,
 	(char*)("EC_LIGHT"), &texlist_ec_light,

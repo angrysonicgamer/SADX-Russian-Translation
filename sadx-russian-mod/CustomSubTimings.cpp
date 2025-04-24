@@ -50,7 +50,7 @@ void SetCustomCutsceneTimings(const char* path, const HelperFunctions& helperFun
 	CutsceneDataList[0x016D]->Function = ev016D_a_warriorfeather;	
 }
 
-/*void SetCustomCutsceneTimingsTweaked(const char* path, const HelperFunctions& helperFunctions)
+void SetCustomCutsceneTimingsTweaked(const char* path, const HelperFunctions& helperFunctions)
 {
 	///*CutsceneDataList[0x0006]->Function = ev0006_s_poolsidewithtails;
 	//CutsceneDataList[0x0008]->Function = ev0008_s_chaos1;
@@ -85,5 +85,5 @@ void SetCustomCutsceneTimings(const char* path, const HelperFunctions& helperFun
 
 	CutsceneDataList[0x00FF]->Function = ev00FF_l_supersonic;
 
-	CutsceneDataList[0x0140]->Function = ev0140_e_findjetbooster;
-}*/
+	CutsceneDataList[0x0140]->Function = ev0140_e_findjetbooster;*/
+}

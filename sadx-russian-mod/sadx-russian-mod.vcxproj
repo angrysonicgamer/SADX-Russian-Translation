@@ -80,6 +80,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cutscene-decomp\Sonic\ev0024_s_eggviper.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev000C_s_afterchaos4_tw.cpp" />
     <ClCompile Include="LanguageSetting.cpp" />
     <ClCompile Include="LoadedMods.cpp" />
     <ClCompile Include="TextureFontSetup.cpp" />
