@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev001C[] = {
+PVMEntry texTbl_ev001C_tw[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("SHAPE_FROG"), &texlist_shape_frog,
 	0
@@ -163,6 +163,7 @@ void ev001C_s_beforechaos6_tw(int state)
 		EV_Wait(1);
 		EV_SetAction(eggmoble, &action_gm_gm0025_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 16);
 		EV_SerifWait();
+		EV_Wait(5);
 		EV_SerifPlay(572);
 		EV_Msg((msgTbl_ev001C[TextLanguage])[11]); //"\aI even found \nChaos' missing tail!"
 		EV_Wait(1);

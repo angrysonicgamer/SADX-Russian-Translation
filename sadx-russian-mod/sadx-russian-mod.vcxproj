@@ -80,7 +80,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cutscene-decomp\Sonic\ev0024_s_eggviper.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0006_s_poolsidewithtails_tw.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0008_s_chaos1_tw.cpp" />
     <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev000C_s_afterchaos4_tw.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0012_s_meetingamy_tw.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0013_s_beforetwinklepark_tw.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001C_s_beforechaos6_tw.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001D_s_afterchaos6_tw.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001E_s_lostworld_tw.cpp" />
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0024_s_eggviper_tw.cpp" />
     <ClCompile Include="LanguageSetting.cpp" />
     <ClCompile Include="LoadedMods.cpp" />
     <ClCompile Include="TextureFontSetup.cpp" />

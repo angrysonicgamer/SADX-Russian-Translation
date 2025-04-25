@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev001E[] = {0};
+PVMEntry texTbl_ev001E_tw[] = {0};
 
 void ev001E_s_lostworld_tw(int state)
 {
@@ -52,14 +52,14 @@ void ev001E_s_lostworld_tw(int state)
 		EV_Msg((msgTbl_ev001E[TextLanguage])[0]); //"\aAarrgh!  \nI hate Eggman!"
 		EV_Wait(1);
 		EV_SerifWait();
-		EV_Wait(20);
+		EV_Wait(30);
 		EV_CameraPos(0, 0, -554.40002f, 4.9000001f, -592.79999f);
 		EV_CameraAng(0, 0, 0x10070, 0x415C, 0);
 		EV_CameraPos(0, 100, -558.59998f, 4.9000001f, -601.70001f);
 		EV_CameraAng(0, 100, 0x10070, 0x591C, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_s_s0027_sonic, &SONIC_TEXLIST, 0.5f, 1, 10);
-		EV_Wait(10);
+		EV_Wait(15);
 		EV_SerifPlay(583);
 		EV_SetFace(player, "E");
 		EV_Msg((msgTbl_ev001E[TextLanguage])[1]); //"\aWhere's this?"
@@ -137,7 +137,7 @@ void ev001E_s_lostworld_tw(int state)
 		EV_MsgW(60, (msgTbl_ev001E[TextLanguage])[4]); //"\aI think it's trying to \nshow me some"...
 		EV_SerifWait();
 		EV_MsgClose();
-		EV_Wait(140);
+		EV_Wait(20);
 		EventSe_Stop(3);
 		EV_CameraPos(1, 0, -564.12402f, -0.44499999f, -600.0f);
 		EV_CameraAng(1, 0, 0x1700, 0x6800, 0);

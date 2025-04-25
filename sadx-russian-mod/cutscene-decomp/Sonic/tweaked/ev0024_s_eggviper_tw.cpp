@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0024[] = {
+PVMEntry texTbl_ev0024_tw[] = {
 	(char*)("F_EGG_ZANGAI"), &F_EGG_ZANGAI_TEXLIST,
 	0
 };
@@ -30,16 +30,12 @@ void ev0024_s_eggviper_tw(int state)
 		EV_CameraAng(1, 0, 0xF800, 0xBC00, 0);
 		EV_CameraChase(player);
 		COverlaySetSpeed(KURAYAMI, -0.0062500001f);
-		EV_MovePoint2(player, -389.41f, -49940.68f, -3.9400001f, 0.80000001f, 1.1f);
+		EV_MovePoint2(player, -378.05969f, -49940.66f, -2.4122f, 0.80000001f, 1.1f);
 		EV_Wait(80);
 		EV_CameraChaseFree();
 		EV_CameraPos(1, 0, -350.33499f, -49936.27f, -30.290001f);
 		EV_CameraAng(1, 0, 0xA00, 0x5400, 0);
 		EV_WaitMove(player);
-		EV_ClrAction(player);
-		EV_PlayPad(0, &e0024s);
-		EV_Wait(60);
-		EV_SetPos(player, -378.05969f, -49940.66f, -2.4122f);
 		EV_CameraPos(1, 0, -299.854f, -49939.512f, 10.88f);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 5.0f, 0.0f, 0);
 		EV_CameraChase(player);
@@ -51,7 +47,7 @@ void ev0024_s_eggviper_tw(int state)
 		EV_CameraTargetFree();
 		EV_CameraPos(1, 0, -303.81f, -49999.723f, 1.456f);
 		EV_CameraAng(1, 0, 0xE00, 0x4400, 0);
-		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 1.0f, 0, 8); //Shows up too early (during ball animation) and doesn't loop.
+		//EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 1.0f, 0, 8); //Shows up too early (during ball animation) and doesn't loop.
 		EV_Wait(80);
 		EV_CameraPos(1, 0, -327.017f, -49992.781f, 3.267f);
 		EV_CameraAng(1, 0, 0x1300, 0xBE00, 0);
@@ -115,19 +111,19 @@ void ev0024_s_eggviper_tw(int state)
 		EV_EggViperJoushou();
 		EventSe_Volume(0, -4, 300);
 		EV_CameraAng(1, 120, 0x1B00, 0xC000, 0);
-		EV_Wait(200);
-		EventSe_Oneshot(1335, 0, 0, 0);
-		IWA = EV_zangai_ctrl(10.071f, -49500.234f, 7.2740002f, 3.0f, 0.40000001f, 80.0f, 15);
-		IWA2 = EV_zangai_ctrl(91.514999f, -49500.16f, -16.011f, 3.0f, 0.40000001f, 50.0f, 30);
-		IWA3 = EV_zangai_ctrl(-122.556f, -49500.234f, 174.875f, 3.0f, 0.40000001f, 50.0f, 10);
+		EV_Wait(20);
 		EV_SerifPlay(603);
 		EV_Msg(msgTbl_ev0024[TextLanguage][8]); //"\aHold it right there, \nEggman!"
 		EV_Wait(20);
 		EV_SerifPlay(2057);
 		EV_Msg(msgTbl_ev0024[TextLanguage][9]); //"\aI'll make you realize this time."
-		RumbleA(0, 10);		
 		EV_SerifPlay(2058);
-		EV_Msg(msgTbl_ev0024[TextLanguage][10]); //"\aThat no matter how many times\nyou try, NO WAY! You will always fail."
+		EV_Msg(msgTbl_ev0024[TextLanguage][10]); //"\aThat no matter how many times\nyou try, NO WAY! You will always fail."	  
+		EventSe_Oneshot(1335, 0, 0, 0);
+		IWA = EV_zangai_ctrl(10.071f, -49500.234f, 7.2740002f, 3.0f, 0.40000001f, 80.0f, 15);
+		IWA2 = EV_zangai_ctrl(91.514999f, -49500.16f, -16.011f, 3.0f, 0.40000001f, 50.0f, 30);
+		IWA3 = EV_zangai_ctrl(-122.556f, -49500.234f, 174.875f, 3.0f, 0.40000001f, 50.0f, 10);
+		RumbleA(0, 10);
 		EV_CameraAng(1, 2, 0x1A00, 0xBF00, 0x100);
 		EV_Wait(1);
 		EV_CameraAng(1, 2, 0x1C00, 0xC100, 0xFF00);
@@ -315,11 +311,11 @@ void ev0024_s_eggviper_tw(int state)
 		EV_CameraAng(1, 2, 0x1B00, 0xC000, 0xFF00);
 		EV_Wait(1);
 		RumbleA(0, 0);
-		EV_CameraPos(1, 0, -325.29401f, -49997.578f, -20.613001f);
+		EV_CameraPos(1, 0, -335.29401f, -49997.578f, -20.613001f);
 		EV_CameraAng(1, 0, 0x1000, 0x8B00, 0);
 		EV_CameraChase(player);
 		EV_MovePoint2(player, -198.84f, -50000.0f, -6.0500002f, 1.5f, 2.0f);
-		EV_Wait(1);		
+		EV_Wait(1);
 		RumbleA(0, 10);
 		EV_CameraAng(1, 2, 0xF00, 0x8C00, 0x100);
 		EV_Wait(1);

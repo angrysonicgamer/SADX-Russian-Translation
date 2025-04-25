@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0012[] = {
+PVMEntry texTbl_ev0012_tw[] = {
 	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
 	(char*)("AMY"), &AMY_TEXLIST,
@@ -94,65 +94,28 @@ void ev0012_s_meetingamy_tw(int state)
 		EV_Msg((msgTbl_ev0012[TextLanguage])[1]); //Давно не виделись!
 		EV_ClrFace(amy);
 		EV_SerifWait();
-		EV_SetAction(player, &action_s_s0037_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
-		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
+		EV_ClrAction(player);
+		EV_SetAction(player, &action_s_s0037_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
 		EV_ClrFace(player);
 		EV_SetFace(player, "DBBAA0");
 		EV_SerifPlay(499);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[2]); //Э-Эми?
 		moveObjectOn(obj_wing1, 4.5f, 8.0f, 0.2f, 100, amy);
 		EV_Wait(2);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1203.0f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1202.8f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1202.6f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1202.4f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1202.2f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1202.0f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1201.8f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1201.6f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1201.4f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1201.2f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1201.0f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1200.8f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1200.6f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1200.4f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1200.2f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1200.0f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1199.8f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1199.6f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1199.4f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1199.2f);
-		EV_Wait(1);
-		EV_SetPos(player, -534.20001f, 0.0099999998f, 1199.0f);
-		EV_WaitAction(amy);
+		moveObject(player, -534.20001f, 0.0099999998f, 1203.0f, -534.20001f, 0.0099999998f, 1199.0f, 20);
+		EV_WaitAction(player);
+		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
+		//EV_WaitAction(amy);
 		EV_SetAng(amy, 0, 0x8A00, 0);
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 1);
 		EV_ClrFace(player);
 		EV_LookObject(amy, player, 0.0f, 4.0f, 0.0f);
 		EV_MsgClose();
-		EV_Wait(10);
+		EV_Wait(1);
+		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[70], &AMY_TEXLIST, 0.75f, 1, 1);
-		EV_Wait(20);
+		EV_Wait(1);
 		EV_CameraPos(1, 90, -528.5f, 2.5f, 1189.9f);
 		EV_CameraAng(1, 90, 0x855, 0x6FC3, 0x300);
 		EV_ClrFace(amy);
@@ -169,12 +132,13 @@ void ev0012_s_meetingamy_tw(int state)
 		EV_Msg((msgTbl_ev0012[TextLanguage])[3]); //Да стой ты!\nНу что за манеры?
 		EV_Wait(15);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 0.75f, 1, 8);
-		EV_Wait(40);
-		if (VoiceLanguage == Languages_English) EV_ClrFace(amy);
+		EV_WaitMove(amy);
+		EV_Wait(5);
+		EV_ClrAction(amy);
+		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 0.75f, 1, 1);
+		EV_SerifWait();
+		EV_ClrFace(amy);
 		EV_Wait(10);
-		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(amy);
-		EV_Wait(10);
-		EV_SerifStop();
 		EV_ClrAction(obj_wing1);
 		EV_SetAction(obj_wing1, &action_w_w0121_wing, &VER1_WING_TEXLIST, 0.69999999f, 1, 0);
 		EV_SetPos(obj_wing1, amy->twp->pos.x,
@@ -196,7 +160,7 @@ void ev0012_s_meetingamy_tw(int state)
 		EV_Msg((msgTbl_ev0012[TextLanguage])[4]); //Слушай, за этой птичкой\nохотятся.
 		EV_CameraPos(1, 75, -533.70001f, 7.02f, 1200.45f);
 		EV_CameraAng(0, 40, 0xFE00, 0x8E00, 0);
-		EV_Wait(50);
+		EV_Wait(40);
 		EV_CameraAng(0, 85, 0xF73B, 0x8E00, 0);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[5]); //Можешь ненадолго стать\nеё телохранителем?
 		EV_Wait(60);
@@ -213,15 +177,15 @@ void ev0012_s_meetingamy_tw(int state)
 		EV_CameraPos(0, 30, -525.79999f, 2.2f, 1207.2f);
 		EV_CameraAng(0, 30, 0x1300, 0x1EF0, 0);
 		EV_SetFace(player, "F");
-		dsPlay_oneshot_v(1333, 0, 0, 127, -529.20001f, 2.01f, 1206.0f);
+		//dsPlay_oneshot_v(1333, 0, 0, 127, -529.20001f, 2.01f, 1206.0f);
 		EV_SerifPlay(502);
 		EV_ClrFace(amy);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[6]); //А-а-а?
 		moveObjectOn(obj_wing1, 0.2f, 1.0f, -0.60000002f, 300, amy);
 		EV_SerifWait();
-		EV_Wait(15);
+		EV_Wait(5);
 		EV_ClrFace(player);
-		EV_Wait(30);
+		EV_Wait(15);
 		EV_CameraPos(1, 0, -516.59998f, 8.1099997f, 1186.9f);
 		EV_CameraAng(1, 0, 0xFA55, 0x5A00, 0xFE00);
 		EV_CameraPos(1, 90, -520.54999f, 7.4200001f, 1189.9f);
@@ -236,7 +200,7 @@ void ev0012_s_meetingamy_tw(int state)
 		if (VoiceLanguage == Languages_English) EV_ClrFace(amy);
 		EV_Wait(10);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
-		EV_Wait(120);
+		EV_Wait(30);
 		dsStop_num(1325);
 		stopObjectAll();
 		break;

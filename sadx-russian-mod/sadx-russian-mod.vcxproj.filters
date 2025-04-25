@@ -186,6 +186,30 @@
     <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev000C_s_afterchaos4_tw.cpp">
       <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
     </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0006_s_poolsidewithtails_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0008_s_chaos1_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0012_s_meetingamy_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0013_s_beforetwinklepark_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001C_s_beforechaos6_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001D_s_afterchaos6_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001E_s_lostworld_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
+    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0024_s_eggviper_tw.cpp">
+      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">

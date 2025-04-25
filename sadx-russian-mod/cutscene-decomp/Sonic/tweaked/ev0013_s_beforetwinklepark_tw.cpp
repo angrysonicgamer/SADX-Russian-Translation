@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0013[] = {
+PVMEntry texTbl_ev0013_tw[] = {
 	(char*)("AMY"), &AMY_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
 	(char*)("EGGROB"), &EGGROB_TEXLIST,
@@ -127,7 +127,6 @@ void ev0013_s_beforetwinklepark_tw(int state)
 		BGM_Stop();
 		EventSe_Oneshot(1342, 0, 0, 0);
 		EV_Wait(21);
-		BGM_Play(MusicIDs_theamy);
 		EV_LookPoint(amy, 366.57999f, 15.0f, 1587.15f);
 		EV_SerifPlay(506);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[2]); //"\aWhoaaa!"
@@ -148,6 +147,7 @@ void ev0013_s_beforetwinklepark_tw(int state)
 		EV_Wait(60);
 		EV_MsgCls();
 		EV_SetPos(zero, 334.92999f, 0.0f, 1204.71f);
+		BGM_Play(MusicIDs_theamy);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 335.82001f, 5.7680001f, 1577.486f);
 		EV_CameraAng(1, 0, 0x728, 0xA8C8, 0);
@@ -176,6 +176,8 @@ void ev0013_s_beforetwinklepark_tw(int state)
 		EV_SerifPlay(509);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[5]); //"\aLook here!   It says, \n'Cute couples"...
 		EV_Wait(100);
+		if (VoiceLanguage == Languages_Japanese)
+			EV_Wait(15);
 		EV_ClrFace(player);
 		EV_CameraPos(1, 60, 316.17001f, 4.5900002f, 1604.0699f);
 		EV_CameraAng(1, 60, 0xFF28, 0xDBDC, 0);

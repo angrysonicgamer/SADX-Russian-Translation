@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0006[] = {
+PVMEntry texTbl_ev0006_tw[] = {
 	(char*)("M_EM_PURPLE"), &M_EM_PURPLE_TEXLIST,
 	0
 };
@@ -72,8 +72,8 @@ void ev0006_s_poolsidewithtails_tw(int state)
 		EV_ClrFace(player);
 		EV_MsgCls();
 		EV_Wait(30);
-		EV_SetAng(tails, 0, 0x6800, 0);
-		EV_SetAng(player, 0, 0xE200, 0);
+		EV_SetAng(tails, 0, 0x7200, 0);
+		EV_SetAng(player, 0, 0xEA00, 0);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_LookFree(player);
 		EV_CameraAng(0, 0, 0xF800, 0x1B00, 0);
@@ -140,21 +140,21 @@ void ev0006_s_poolsidewithtails_tw(int state)
 		EV_Msg((msgTbl_ev0006[TextLanguage])[7]); //"\aThanks, but you gotta check out\nmy n"...
 		EV_Wait(1);
 		EV_SerifWait();
-		EV_SerifPlay(424);
-		EV_Msg((msgTbl_ev0006[TextLanguage])[8]); //"\aTa dahhh!"
-		EV_Wait(1);
-		EV_SerifWait();
-		EV_ClrFace(tails);
 		EV_MsgClose();
 		EventSe_Oneshot(743, 0, 0, 0);
-		EV_CameraAng(0, 0, 0xE100, 0x6700, 0);
+		EV_CameraAng(0, 0, 0xE700, 0x6700, 0);
 		EV_CameraPos(0, 0, -444.47f, 26.940001f, 1889.1f);
 		EV_SetAction(tails, &action_m_m0104_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(PURPLE, &action_m_m0104cp_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(1);
-		EV_CameraAng(0, 30, 0xE100, 0x6700, 0);
+		//EV_CameraAng(0, 30, 0xE100, 0x6700, 0);
 		EV_CameraPos(0, 30, -456.14001f, 6.0900002f, 1906.5699f);
-		EV_Wait(90);
+		EV_Wait(10);
+		EV_SerifPlay(424);
+		EV_Msg((msgTbl_ev0006[TextLanguage])[8]); //"\aTa dahhh!"
+		EV_SerifWait();
+		EV_ClrFace(tails);
+		EV_Wait(30);
 		EV_MsgClose();
 		EV_CameraAng(0, 0, 0xFB00, 0xE100, 0);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.30000001f, 1, 8);

@@ -592,9 +592,10 @@ void LoadOtherText()
 	WriteData((const char**)0x887734, "ДАЛЕЕ");
 	WriteData((const char**)0x887730, "НАЗАД");
 
-	// If Obj Textures replacemant is enabled
+	// Textures replacemant is enabled
+	
 	if (Config::EnableObjTextures)
-		WriteData((const char**)0x90, "\tТайный пароль:\n«Э-Г-Г-М-А-Н».");
+		WriteData((HintMessageString*)0x7F6180, { "\tСекретный пароль:\n«Э-Г-Г-М-А-Н».", 0 });
 }
 
 
