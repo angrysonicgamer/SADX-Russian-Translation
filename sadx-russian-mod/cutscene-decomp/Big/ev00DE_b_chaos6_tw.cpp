@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev00DE[] = {
+PVMEntry texTbl_ev00DE_tw[] = {
 	(char*)("M_EM_YELLOW"), &M_EM_YELLOW_TEXLIST,
 	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
@@ -238,7 +238,7 @@ void ev00DE_b_chaos6_tw(int state)
 		EV_SerifPlay(1370);
 		EV_Msg(msgTbl_ev00DE[TextLanguage][4]); //"\aThe frog is possessed by your tail. "
 		EV_SetAction(Frog, &_action_f_f0001_frog, &texlist_shape_frog, 1.5f, 1, 0);
-		EV_Wait(40);
+		EV_Wait(85);
 		EV_CameraPos(1, 0, 58.599998f, 758.0f, -470.53f);
 		EV_CameraAng(1, 0, 0xD50, 0x8F0C, 0);
 		EV_SerifWait();
@@ -274,10 +274,12 @@ void ev00DE_b_chaos6_tw(int state)
 		EV_CameraAng(1, 0, 0xF6CC, 0x40DA, 0x100);
 		EV_CameraPos(1, 100, 80.599998f, 763.09998f, -466.70001f);
 		EV_CameraAng(1, 100, 0xF7C8, 0x3ADA, 0x200);
-		EV_SetAction(Frog, &_action_f_f0002_frog, &texlist_shape_frog, 1.0f, 1, 0);
-		moveObject(Frog, 53.0f, 750.0f, -461.20001f, 2.8f, 773.0f, -486.0f, 130);
-		EV_WaitMove(Frog);
-		EV_Wait(120);
+		EV_ClrAction(Frog);
+		EV_SetAction(Frog, &_action_f_f0002_frog, &texlist_shape_frog, 0.4f, 1, 0);
+		EV_Wait(18);
+		moveObject(Frog, 53.0f, 750.0f, -461.20001f, 2.8f, 773.0f, -486.0f, 60);
+		EV_Wait(64);
+		EV_ClrAction(Frog);
 		EV_SetAction(Frog, &action_f_f0010_frog, &texlist_shape_frog, 1.0f, 1, 0);
 		if (FLASH)
 		{
@@ -425,6 +427,7 @@ void ev00DE_b_chaos6_tw(int state)
 		EV_SerifPlay(1379);
 		EV_Msg(msgTbl_ev00DE[TextLanguage][12]); //"\aI'll save you...   Don't worry, pally"...
 		EV_SerifWait();
+		EV_Wait(15);
 		EV_SetAng(player, 0, 0xAC00, 0);
 		EV_SetAng(sonic, 0, 0xA400, 0);
 		EV_LookObject(sonic, player, 0.0f, 8.0f, 0.0f);
@@ -481,7 +484,7 @@ void ev00DE_b_chaos6_tw(int state)
 		EV_SetAction(player, BIG_ACTIONS[23], &BIG_TEXLIST, 1.0f, 1, 16);
 		EV_CameraPos(1, 80, 90.199997f, 755.59998f, -446.5f);
 		EV_CameraAng(1, 80, 0x984, 0x2751, 0);
-		EV_MovePoint2(sonic, -89.5f, 766.5f, -520.29999f, 0.46000001f, 0.059999999f);
+		EV_MovePoint2(sonic, -89.5f, 766.5f, -520.29999f, 0.36f, 0.049999999f);
 		EV_Wait(80);
 		EV_SetPos(player, 62.5f, 747.5f, -456.60001f);
 		EV_SetAng(player, 0x900, 0xA000, 0);
@@ -510,7 +513,7 @@ void ev00DE_b_chaos6_tw(int state)
 		EV_CameraAng(1, 0, 0xD3A, 0x2F62, 0xFFB2);
 		EV_CameraPos(1, 70, 114.5f, 749.09998f, -449.0f);
 		EV_CameraAng(1, 70, 0xF3A, 0x2F62, 0xFFB2);
-		EV_Wait(160);
+		EV_Wait(69);
 		EventSe_Stop(1);
 		EV_SerifWait();
 		EV_CameraPerspective(1, 1, 0x3111);

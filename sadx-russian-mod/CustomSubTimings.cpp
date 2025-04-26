@@ -62,21 +62,18 @@ void SetCustomCutsceneTimingsTweaked(const char* path, const HelperFunctions& he
 	CutsceneDataList[0x001E]->Function = ev001E_s_lostworld_tw;
 	CutsceneDataList[0x0024]->Function = ev0024_s_eggviper_tw;
 
-	/*CutsceneDataList[0x0032]->Function = ev0032_t_meetingsonic_tw;
+	CutsceneDataList[0x0032]->Function = ev0032_t_meetingsonic_tw;
 	CutsceneDataList[0x0033]->Function = ev0033_t_egghornet_tw;
 	CutsceneDataList[0x0034]->Function = ev0034_t_chaos1_tw;
 	CutsceneDataList[0x003A]->Function = ev003A_t_afterchaos4_tw;
 	CutsceneDataList[0x004B]->Function = ev004B_t_eggmantakesbirdie_tw;
-	CutsceneDataList[0x0050]->Function = ev0050_t_eggwalker_tw;
-	CutsceneDataList[0x0051]->Function = ev0051_t_walkerdefeated_tw;
 
+	CutsceneDataList[0x0099]->Function = ev0099_k_beforechaos6_tw;
 	CutsceneDataList[0x0060]->Function = ev0060_a_intro1_tw;
 	CutsceneDataList[0x0061]->Function = ev0061_a_intro2_tw;
 	CutsceneDataList[0x0062]->Function = ev0062_a_meetsonic_tw;
 
-	CutsceneDataList[0x0099]->Function = ev0099_k_beforechaos6_tw;
-
-	CutsceneDataList[0x00B4]->Function = ev00B4_e_e101_tw;
+	//CutsceneDataList[0x00B4]->Function = ev00B4_e_e101_tw;
 	CutsceneDataList[0x00B7]->Function = ev00B7_e_fanfare_tw;
 	CutsceneDataList[0x00BB]->Function = ev00BB_e_deliverfrog_tw;
 
@@ -84,6 +81,4 @@ void SetCustomCutsceneTimingsTweaked(const char* path, const HelperFunctions& he
 	CutsceneDataList[0x00DE]->Function = ev00DE_b_chaos6_tw;
 
 	CutsceneDataList[0x00FF]->Function = ev00FF_l_supersonic_tw;
-
-	CutsceneDataList[0x0140]->Function = ev0140_e_findjetbooster_tw;*/
 }

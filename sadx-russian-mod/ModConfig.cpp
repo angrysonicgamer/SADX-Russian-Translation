@@ -27,7 +27,6 @@ void DisplayMessage(std::wstring message)
 
 std::wstring CutsceneEditingModsMessage =
 	L"У вас включён один из модов, изменяющих катсцены:\n\n"
-	L"– Tweaked Cutscenes;\n"
 	L"– Cream the Rabbit in SA1 Dreamcast Style;\n"
 	L"– Rouge the Bat in SA1 Dreamcast Style.\n\n"
 	L"Во избежание конфликтов с этими модами\n"
@@ -85,15 +84,11 @@ void InitCustomCutsceneTimings(const char* path, const HelperFunctions& helperFu
 	if (Config::EditedCutsceneTimings)
 	{
 		helperFunctions.LoadEXEData((modpath + editedTimings).c_str(), modpath.c_str());
-		if (LoadedMods::TweakedCutscenes || LoadedMods::Cream || LoadedMods::Rouge)
-		{
-			SetCustomCutsceneTimingsTweaked(path, helperFunctions);
-			//DisplayMessage(CutsceneEditingModsMessage);
-		}
-		else
-		{			
-			SetCustomCutsceneTimings(path, helperFunctions);
-		}
+		if (LoadedMods::Cream || LoadedMods::Rouge)
+			DisplayMessage(CutsceneEditingModsMessage);
+		else if (LoadedMods::TweakedCutscenes)
+			SetCustomCutsceneTimingsTweaked(path, helperFunctions);		
+		else SetCustomCutsceneTimings(path, helperFunctions);		
 	}
 }
 

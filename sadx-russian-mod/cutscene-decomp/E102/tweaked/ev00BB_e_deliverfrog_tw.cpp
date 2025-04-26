@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev00BB[] = {
+PVMEntry texTbl_ev00BB_tw[] = {
 	(char*)("FROG"), &texlist_frog,
 	(char*)("FROG1"), &texlist_frog1,
 	(char*)("FROG2"), &texlist_frog2,
@@ -39,7 +39,6 @@ void ev00BB_e_deliverfrog_tw(int state)
 		SetBankDir(107);
 		EventSe_Init(2);
 		WHITE = COverlayCreate(1.0f, 0.1f, 1.0f, 1.0f, 1.0f);
-		BGM_Play(MusicIDs_thee102);
 		EV_CameraPerspective(1, 1, 0x3C72);
 		EV_SetPos(player, -32.0f, -5.0999999f, -42.0f);
 		EV_SetAng(player, 0, 0x8000, 0);
@@ -107,6 +106,7 @@ void ev00BB_e_deliverfrog_tw(int state)
 			COverlaySetSpeed(WHITE, -0.016666668f);
 		}
 		EV_MsgClose();
+		BGM_Play(MusicIDs_egcarer1);
 		EV_Wait(50);
 		EV_SetAction(player, E102_ACTIONS[45], &E102_TEXLIST, 0.1f, 1, 0);
 		EV_Wait(30);
@@ -225,7 +225,9 @@ void ev00BB_e_deliverfrog_tw(int state)
 		EV_CameraPos(1, 80, -48.16f, 9.1800003f, -20.950001f);
 		EV_CameraPerspective(1, 80, 0x3C72);
 		EV_SetAction(eggman, &action_g_g0002_eggman, &EGGMAN_TEXLIST, 1.0f, 1, 8);
-		EV_MovePoint2(eggman, -32.0f, 3.5f, -68.0f, 0.18000001f, 0.0f);
+		EV_MovePoint2(eggman, -32.0f, 3.5f, -68.0f, 0.28f, 0.0f);
+		EV_SerifWait();
+		EV_MsgClose();
 		EV_WaitMove(eggman);
 		EV_MoveRotation(eggman, 0, 0x8000, 0);
 		EV_SerifWait();

@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev003A[] = {
+PVMEntry texTbl_ev003A_tw[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("CAPTUREBEAM"), &CAPTUREBEAM_TEXLIST,
 	(char*)("EC_LIGHT"), &texlist_ec_light,
@@ -86,14 +86,14 @@ void ev003A_t_afterchaos4_tw(int state)
 		EV_Wait(30);
 		EV_SerifPlay(704);
 		EV_Msg(msgTbl_ev003A[TextLanguage][2]); //"\aAdieu... Until we meet again,\nmy fri"...
-		EV_Wait(40);		
+		EV_Wait(40);
 		EV_CameraTargetObj(0, 150, eggmoble, 0.0f, 6.0f, 0.0f, 0);
 		EV_Wait(60);
 		EV_MsgClose();
 		ChgCaptureMod(CAP_01, 1);
 		dsPlay_timer_v(1336, 0xCB80001, 1, 120, 185, 80.0f, 80.0f, 160.0f);
 		EV_Wait(30);
-		moveObjectAngle2(eggmoble, 80.0f, 80.0f, 160.0f, 235.71001f, 807.02002f, 643.87f, 0, 0x3B00, 0, 0x1500, 0x3B00, 0, 180);
+		moveObjectAngle2(eggmoble, 80.0f, 80.0f, 160.0f, 307.71001f, 1172.02002f, 864.87f, 0, 0x3B00, 0, 0x1500, 0x3B00, 0, 180);
 		EV_Wait(150);
 		stopObject(eggmoble);
 		EV_CameraTargetFree();
@@ -207,6 +207,7 @@ void ev003A_t_afterchaos4_tw(int state)
 		{
 			EV_ClrFace(sonic);
 		}
+		EV_SerifWait();
 		EV_Wait(60);
 		EV_ClrAction(knuckles);
 		EV_SetAction(knuckles, KNUCKLES_ACTIONS[56], &KNUCKLES_TEXLIST, 2.0f, 1, 0);

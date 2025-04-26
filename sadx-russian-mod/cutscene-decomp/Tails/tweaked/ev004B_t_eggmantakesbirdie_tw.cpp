@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev004B[] = {
+PVMEntry texTbl_ev004B_tw[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("MGHAND"), &MGHAND_TEXLIST,
 	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
@@ -177,6 +177,10 @@ void ev004B_t_eggmantakesbirdie_tw(int state)
 		stopObject(KOTORI);
 		EV_SetPos(KOTORI, 42.549999f, 1536.0f, 3227.0f);
 		moveObjectAngle2(Mhand, -4.5f, 1525.0f, 3242.5f, 8.0f, 1563.0f, 3221.0f, -0x1000, 0, -0x2500, -0x1000, 0, -0x2500, 28);
+		EV_SetAction(player, MILES_ACTIONS[48], &MILES_TEXLIST, 2.5f, 1, 8);
+		EV_SetAction(sonic, SONIC_ACTIONS[6], &SONIC_TEXLIST, 2.7f, 1, 8);
+		moveObject(player, -1, 1526, 3336, 3.4300001f, 1526.4f, 3240.6201f, 85);
+		moveObject(sonic, -1, 1526, 3336, -6.3463001f, 1525.7273f, 3258.1814f, 85);
 		EV_Wait(50);
 		EventSe_Stop(0);
 		EV_MsgClose();
@@ -185,9 +189,7 @@ void ev004B_t_eggmantakesbirdie_tw(int state)
 		EV_LookPoint(sonic, 39.0f, 1561.7f, 3226.2f);
 		EV_LookFree(amy);
 		EV_SetPos(player, -5.0f, 1526.0f, 3304.8f);
-		EV_ClrAction(player);
-		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
-		EV_Wait(24);
+		EV_Wait(14);
 		ChgEggMobleMod(5);
 		EV_Wait(3);
 		EV_ClrAction(KOTORI);
@@ -199,12 +201,17 @@ void ev004B_t_eggmantakesbirdie_tw(int state)
 		EV_CameraPerspective(0, 1, 0x31C7);
 		EV_CameraAng(1, 0, 0xEA9D, 0xCA47, 0xFE00);
 		EV_CameraPos(1, 0, -34.57f, 1564.1f, 3256.8999f);
+		EV_LookPoint(player, 58.799999f, 1545.0f, 3230.0801f);
+		EV_LookPoint(sonic, 58.799999f, 1545.0f, 3230.0801f);
 		EV_SetPos(amy, -12.6f, 1526.0f, 3233.0f);
 		EV_SetAng(amy, 0, 0x4000, 0);
 		EV_SetPos(player, 3.4300001f, 1526.4f, 3240.6201f);
 		EV_SetAng(player, 0, 0x498D, 0);
 		EV_SetPos(sonic, -6.3463001f, 1525.7273f, 3258.1814f);
 		EV_SetAng(sonic, 0, 0x4400, 0);
+		EV_ClrAction(player);
+		EV_ClrAction(sonic);
+		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_Wait(2);
 		ChgEggMobleMod(5);
@@ -222,7 +229,6 @@ void ev004B_t_eggmantakesbirdie_tw(int state)
 		EV_SetAction(KOTORI, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 0);
 		moveObject(KOTORI, 61.099998f, 1580.0f, 3203.0f, -30.6f, 1537.0f, 3233.0f, 250);
 		EV_Wait(1);
-		EV_LookPoint(sonic, 58.799999f, 1545.0f, 3230.0801f);
 		EV_LookPoint(amy, 58.799999f, 1545.0f, 3230.0801f);
 		EV_CameraPerspective(1, 1, 0x238E);
 		EV_ClrAction(eggmoble);
@@ -265,7 +271,7 @@ void ev004B_t_eggmantakesbirdie_tw(int state)
 		EV_Msg(msgTbl_ev004B[TextLanguage][6]); //"\aBe gone!   All of you!\nThis is all I"...
 		EV_Wait(1);
 		EV_SerifWait();
-		EV_Wait(1);
+		EV_Wait(10);
 		task_skywalk = CSkyWalk_create2(e102, 1540.0f);
 		EV_Wait(1);
 		EV_SetPos(e102, 0.0f, 1556.0f, 3459.0f);
@@ -278,12 +284,13 @@ void ev004B_t_eggmantakesbirdie_tw(int state)
 		EV_SerifWait();
 		EV_FreeObject(&emerald);
 		EV_MsgClose();
-		EV_Wait(10);
+		EV_Wait(20);
 		EV_CameraPos(1, 0, -0.41780999f, 1555.942f, 3449.4482f);
 		EV_CameraAng(1, 0, 0x1200, 0x8400, 0);
 		EventSe_Oneshot(1336, 0, 0, 0);
 		EV_SerifPlay(775);
 		EV_Msg(msgTbl_ev004B[TextLanguage][8]); //"\aWhat is your wish, master?"
+		//BGM_Play(MusicIDs_thee102);
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_MsgClose();
@@ -382,6 +389,7 @@ void ev004B_t_eggmantakesbirdie_tw(int state)
 		EV_SetAction(e102, E102_ACTIONS[1], &E102_TEXLIST, 0.69999999f, 0, 16);
 		EV_SetAction(e102, E102_ACTIONS[2], &E102_TEXLIST, 1.0f, 1, 16);
 		EV_Wait(70);
+		EV_FreeObject(&KOTORI);
 		EV_CameraPos(1, 0, 6.4200001f, 1528.02f, 3284.7261f);
 		EV_CameraAng(1, 0, 0x792, 0x26D6, 0);
 		EV_CameraPos(0, 80, 11.6f, 1527.65f, 3280.47f);

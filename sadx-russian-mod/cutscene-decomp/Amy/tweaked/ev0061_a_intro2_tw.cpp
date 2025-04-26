@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0061[] = {
+PVMEntry texTbl_ev0061_tw[] = {
 	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
 	(char*)("VER3_WING"), &texlist_ver3_wing,
@@ -47,18 +47,26 @@ void ev0061_a_intro2_tw(int state)
 		EV_CameraPos(1, 0, 134.0f, 34.799999f, 654.776f);
 		EV_CameraAng(1, 0, 0xD800, 0x8000, 0);
 		EV_SerifPlay(845);
-		EV_SetFace(player, "FEF");
+		if (VoiceLanguage == Languages_English)
+			EV_SetFace(player, "C");
+		if (VoiceLanguage == Languages_Japanese)
+			EV_SetFace(player, "FEF");
 		EV_Msg(msgTbl_ev0061[TextLanguage][0]); //"\aEggman?   Can it be?"
 		EV_Wait(1);
 		EV_SerifWait();
+		if (VoiceLanguage == Languages_English)
+			EV_Wait(15);
 		EventSe_Oneshot(1334, 0, 0, 0);
 		EV_Wait(15);
 		EV_LookPoint(player, 132.8f, 5.5f, 662.0f);
 		EV_SetAction(player, &action_a_a0110_amy, &AMY_TEXLIST, 0.30000001f, 1, 1);
 		EV_Wait(10);
 		EV_ClrFace(player);
-		EV_SetFace(player, "AEBB");
+		if (VoiceLanguage == Languages_Japanese)
+			EV_SetFace(player, "AEBB");
 		EV_Wait(3);
+		if (VoiceLanguage == Languages_English)
+			EV_SetFace(player, "F");
 		EV_SerifPlay(846);
 		EV_Msg(msgTbl_ev0061[TextLanguage][1]); //"\aWhat's that?"
 		EV_Wait(17);
@@ -124,14 +132,13 @@ void ev0061_a_intro2_tw(int state)
 		EV_Wait(1);
 		EV_SerifPlay(849);
 		EV_Msg(msgTbl_ev0061[TextLanguage][4]); //"\aHey.  Are you alright? \nYou look kin"...
-		EV_Wait(59);
-		zero = EV_GetPlayer(6);
-		EV_SetPos(zero, 127.475f, 12.0f, 850.0f);
-		EV_SetAng(zero, 0, 0x7D00, 0);
-		EV_Wait(20);
+		EV_Wait(80);
 		EV_MsgClose();
 		RumbleA(0, 5);
 		EV_CameraAng(0, 4, 0xF500, 0x6200, 0x500);
+		zero = EV_GetPlayer(6);
+		EV_SetPos(zero, 127.475f, 12.0f, 850.0f);
+		EV_SetAng(zero, 0, 0x7D00, 0);
 		EV_Wait(2);
 		EV_LookPoint(player, 127.0f, 13.0f, 680.09998f);
 		EV_SetFace(player, "HHHHHHHHH");
@@ -258,9 +265,9 @@ void ev0061_a_intro2_tw(int state)
 		EV_CameraChase(player);
 		EV_SetAng(player, 0, 0, 0);
 		EV_SetAng(obj_ver2_wing, 0, 0, 0);
-		moveObject(player, 119.59f, 0.0f, 696.40002f, 118.8f, 0.0f, 790.0f, 92);
+		moveObject(player, 119.59f, 0.0f, 696.40002f, 118.8f, 0.0f, 765.0f, 92);
 		moveObjectOn(obj_ver2_wing, 0.0f, 0.0f, 0.0f, 92, player);
-		EV_MovePoint2(zero, 121.0f, 0.0f, 710.0f, 0.69999999f, 0.69999999f);
+		EV_MovePoint2(zero, 121.0f, 0.0f, 700.0f, 0.6f, 0.6f);
 		EV_Wait(5);
 		EV_ClrFace(player);
 		EV_SetFace(player, "CI");
@@ -273,27 +280,30 @@ void ev0061_a_intro2_tw(int state)
 		EV_Wait(15);
 		EV_MsgClose();
 		//EV_Msg(msgTbl_ev0061[TextLanguage][8]); //"\aOh no!  Let's get out of here!"
-		EV_SetPos(obj_ver2_wing, 118.8f, 0.0f, 728.79999f);
-		EV_SetPos(player, 118.8f, 0.0f, 728.79999f);
-		moveObject(player, 118.8f, 0.0f, 728.79999f, 118.8f, 0.0f, 768.0f, 40);
+		//EV_SetPos(obj_ver2_wing, 118.8f, 0.0f, 728.79999f);
+		//EV_SetPos(player, 118.8f, 0.0f, 728.79999f);
+		EV_MovePoint2(player, 118.8f, 0.0f, 768.0f, 1.0, 0.5);
 		moveObjectOn(obj_ver2_wing, 0.0f, 0.0f, 0.0f, 40, player);
 		EV_CameraChaseFree();
 		EV_CameraPos(0, 0, 181.73f, 16.700001f, 769.47498f);
 		EV_CameraAng(0, 0, 0xFF00, 0x4000, 0);
-		EV_Wait(30);
+		EV_WaitMove(player);
+		EV_Wait(1);
 		EV_SetAng(obj_ver2_wing, 0, -0x3500, 0);
-		EV_MovePoint2(player, 72.150002f, 0.0f, 770.59998f, 1.3f, 2.0f);
-		moveObjectOn(obj_ver2_wing, 0.0f, 0.0f, 0.0f, 150, player);
+		EV_MovePoint2(player, 72.150002f, 0.0f, 770.59998f, 1.3f, 2.0f); // enter
+		moveObjectOn(obj_ver2_wing, 0.0f, 0.0f, 0.0f, 140, player);
 		EV_Wait(5);
 		EV_CameraChaseFree();
 		EV_CameraPos(0, 0, 181.73f, 16.700001f, 769.47498f);
 		EV_CameraAng(0, 0, 0xFF00, 0x4000, 0);
-		EV_Wait(47);
-		//EV_MsgClose();
+		//EV_Wait(47);
+		EV_WaitMove(player);
 		EV_SetAng(obj_ver2_wing, 0, 0x8A00, 0);
 		EV_MovePoint2(player, 73.0f, 0.0f, 752.70001f, 1.0f, 1.5f);
 		moveObjectOn(obj_ver2_wing, 0.0f, 0.0f, 0.0f, 45, player);
-		EV_Wait(75);
+		EV_Wait(20);
+		EV_MsgClose();
+		EV_Wait(55);
 		EV_SetPos(zero, 125.0f, 20.0f, 700.09998f);
 		EV_Wait(5);
 		EV_MovePoint(zero, 125.0f, 20.0f, 730.0f);
@@ -363,10 +373,10 @@ void ev0061_a_intro2_tw(int state)
 		EV_SetFace(player, "CEGbbbbbbbbb");
 		EV_SerifPlay(856);
 		EV_Msg(msgTbl_ev0061[TextLanguage][12]); //"\aI'll do my best to keep us both from "...
-		EV_Wait(80);
-		EV_SerifWait();
+		EV_WaitMove(player);
 		EV_SetAction(player, &action_a_a0121_amy, &AMY_TEXLIST, 0.1f, 1, 0);
 		EV_SetAction(obj_ver2_wing, &action_w_w0121ver3_wing, &texlist_ver3_wing, 0.1f, 1, 0);
+		EV_SerifWait();
 		EV_CameraPos(0, 0, 121.15f, 4.9499998f, 761.0f);
 		EV_CameraAng(0, 0, 0xB00, 0xB100, 0);
 		EV_CameraPos(0, 60, 120.1f, 4.9499998f, 768.0f);

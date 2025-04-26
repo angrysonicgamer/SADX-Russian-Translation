@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0033[] = {
+PVMEntry texTbl_ev0033_tw[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("EV_EGGMOBLE1"),& EV_EGGMOBLE1_TEXLIST,
 	(char*)("EGM1JET"), &EGM1JET_TEXLIST,
@@ -83,6 +83,7 @@ void ev0033_t_egghornet_tw(int state)
 		EV_SetFace(player, "EECECCDCC0");
 		EV_SerifPlay(639);
 		EV_MsgW(60, msgTbl_ev0033[TextLanguage][1]); //"\aIt's Eggman!"
+		EV_SerifWait();	 
 		EV_ClrFace(player);
 		EV_CameraPos(1, 0, 1039.4f, 128.3f, 837.16998f);
 		EV_CameraAng(1, 0, 0xFA0, 0x298E, 0x710);
@@ -104,8 +105,9 @@ void ev0033_t_egghornet_tw(int state)
 		EV_Wait(75);
 		EV_CameraPos(0, 40, 997.46997f, 158.0f, 805.79999f);
 		EV_CameraAng(0, 40, 0x4A0, 0x988E, 0x110);
-		EV_Wait(45);
+		EV_Wait(35);
 		EV_SerifWait();
+		EV_Wait(10);	  
 		EV_CameraPos(1, 0, 941.5f, 128.3f, 704.79999f);
 		EV_CameraAng(1, 0, 0x32C, 0xAB5B, 0);
 		EV_CameraPos(0, 190, 927.29999f, 126.3f, 720.20001f);
@@ -162,11 +164,11 @@ void ev0033_t_egghornet_tw(int state)
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_CameraPerspective(1, 1, 0x3111);
-		EV_Wait(1);
+		EV_Wait(5);
 		EV_CameraPos(1, 0, 912.29999f, 127.3f, 715.20001f);
 		EV_CameraAng(1, 0, 0x88C, 0xAA2C, 0xFA00);
 		EV_CameraAng(1, 160, 0x68C, 0xAA2C, 0xFA00);
-		EV_Wait(5);
+		EV_Wait(10);
 		EV_SerifPlay(648);
 		EV_Msg(msgTbl_ev0033[TextLanguage][12]); //"\aOr else I'll take it \nfrom you... th"...
 		EventSe_Volume(1, 0, 20);

@@ -95,7 +95,7 @@ void ev00B7_e_fanfare(int state)
 		BGM_Stop();
 		EV_ClrAction(eggman);
 		EV_SetAction(eggman, &action_g_g0001_eggman, &EGGMAN_TEXLIST, 1.0f, 1, 0);
-		BGM_Play(MusicIDs_thee102);
+		BGM_Play(MusicIDs_EggCarrier);
 		EV_Wait(30);
 		EV_MoveRotation(eggman, 0, -0x3000, 0);
 		EV_SerifPlay(1200);
@@ -135,16 +135,17 @@ void ev00B7_e_fanfare(int state)
 		EV_WaitAction(eggman);
 		EV_ClrAction(eggman);
 		EV_SetAction(eggman, &action_g_g0001_eggman, &EGGMAN_TEXLIST, 1.0f, 1, 0);
-		EV_Wait(55);
+		EV_SerifWait();
+		EV_Wait(20);
 		EV_MsgClose();
 		EV_CameraAng(1, 0, 0x1200, 0xF900, 0);
 		EV_CameraPos(1, 0, -16.379999f, 50.860001f, -278.95001f);
 		EV_SerifPlay(1204);
 		EV_Msg(msgTbl_ev00B7[TextLanguage][4]); //"\aBehold!   It's a tailed frog!   \nVer"...
 		EV_Wait(1);
-		EV_SerifWait();
 		EventSe_Oneshot(1333, 0, 0, 0);
 		frog_create();
+				 
 		EV_Wait(25);
 		EV_MsgClose();
 		EV_CameraAng(0, 95, 0x1A00, 0, 0);

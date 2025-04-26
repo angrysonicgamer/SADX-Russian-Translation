@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0140[] = { 0 };
+PVMEntry texTbl_ev0140_tw[] = { 0 };
 
 void ev0140_e_findjetbooster_tw(int state)
 {

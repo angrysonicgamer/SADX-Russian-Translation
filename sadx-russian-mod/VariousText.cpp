@@ -594,8 +594,8 @@ void LoadOtherText()
 
 	// Textures replacemant is enabled
 	
-	if (Config::EnableObjTextures)
-		WriteData((HintMessageString*)0x7F6180, { "\tСекретный пароль:\n«Э-Г-Г-М-А-Н».", 0 });
+	/*if (Config::EnableObjTextures)
+		WriteData((HintMessageString*)0x7F6180, { "\tСекретный пароль:\n«Э-Г-Г-М-А-Н».", 0 });*/
 }
 
 

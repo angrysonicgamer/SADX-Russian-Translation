@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev00D8[] = { 0 };
+PVMEntry texTbl_ev00D8_tw[] = { 0 };
 
 void ev00D8_b_eggcarrier_tw(int state)
 {
@@ -69,8 +69,9 @@ void ev00D8_b_eggcarrier_tw(int state)
 		EV_Wait(10);
 		EV_SerifPlay(1343);
 		EV_MsgW(60, msgTbl_ev00D8[TextLanguage][3]); //"\aThink I'll see what's behind this doo"...
-		EV_Wait(60);
+		EV_SerifWait();
 		EV_MsgClose();
+		EV_Wait(60);
 		break;
 	case 2:
 		EV_InitPlayer(0);

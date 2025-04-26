@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev00FF[] = {
+PVMEntry texTbl_ev00FF_tw[] = {
 	(char*)("LAST1A_HIGHWAY_A"), &LAST1A_HIGHWAY_A_TEXLIST,
 	(char*)("M_EM_BLACK"), &texlist_m_em_black,
 	(char*)("WING_P"), &texlist_wing_p,
@@ -70,7 +70,6 @@ void ev00FF_l_supersonic_tw(int state)
 		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
 		SONIC_SKY = CSkyWalk_create2(player, 150.0f);
 		EV_ClrAction(amy);
-		EV_SetAction(amy, AMY_ACTIONS[45], &AMY_TEXLIST, 2.0f, 1, 0);
 		AMY_SKY = CSkyWalk_create2(amy, 150.0f);
 		EV_ClrAction(tails);
 		MILES_SKY = CSkyWalk_create2(tails, 150.0f);
@@ -138,6 +137,7 @@ void ev00FF_l_supersonic_tw(int state)
 		EV_LookFree(knuckles);
 		EV_FreeObject(&K08_EME);
 		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 0.5f, 1, 16);
+		EV_SetAction(amy, AMY_ACTIONS[45], &AMY_TEXLIST, 2.0f, 1, 0);
 		moveObjectAngle2(amy,
 			amy->twp->pos.x,
 			amy->twp->pos.y,
@@ -480,7 +480,7 @@ void ev00FF_l_supersonic_tw(int state)
 		EventSe_Stop(2);
 		EV_Wait(3);
 		EventSe_Stop(3);
-		EV_Wait(2);
+		EV_Wait(20);
 		break;
 	case 2:
 		EventSe_Close();

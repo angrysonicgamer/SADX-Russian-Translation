@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0032[] = {
+PVMEntry texTbl_ev0032_tw[] = {
 	(char*)("M_EM_PURPLE"), & M_EM_PURPLE_TEXLIST,
 	0
 };
@@ -49,17 +49,17 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_MovePoint2(player, -460.17001f, 1.01f, 1912.28f, 0.56f, 3.0f);
 		EV_CameraAng(0, 90, 0xD200, 0x8500, 0);
 		EV_CameraPos(0, 90, -447.70001f, 66.970001f, 1931.85f);
-		EV_Wait(90);
+		EV_Wait(70);
 		EV_CameraAng(0, 0, 0xFD00, 0xB800, 0);
 		EV_CameraPos(0, 0, -495.04001f, 12.73f, 1963.4399f);
 		EV_CameraAng(0, 110, 0xFD00, 0xD400, 0);
 		EV_CameraPos(0, 110, -467.96899f, 5.2385998f, 1920.849f);
-		EV_Wait(60);
+		EV_Wait(50);
 		EV_MoveFree(player);
 		EV_MoveFree(sonic);
 		EV_Wait(1);
-		EV_MovePoint2(sonic, -450.67001f, 0.0099999998f, 1901.05f, 0.57999998f, 3.0f);
-		EV_MovePoint2(player, -457.17001f, 1.01f, 1917.28f, 0.56f, 3.0f);
+		EV_MovePoint2(sonic, -450.67001f, 0.0099999998f, 1901.05f, 0.57999998f, 4.0f);
+		EV_MovePoint2(player, -457.17001f, 1.01f, 1917.28f, 0.56f, 4.0f);
 		EV_ClrAction(sonic);
 		EV_ClrAction(player);
 		EV_SetFace(sonic, "GG");
@@ -67,7 +67,7 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_Msg(msgTbl_ev0032[TextLanguage][0]); //Давненько мы с тобой\nне виделись!
 		EV_Wait(1);
 		EV_SerifWait();
-		EV_ClrFace(sonic);		
+		EV_ClrFace(sonic);
 		EV_Wait(30);
 		EV_MsgCls();
 		EV_SetAng(player, 0, 0x7200, 0);
@@ -75,8 +75,8 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_LookFree(sonic);
 		EV_CameraAng(0, 0, 0xFD00, 0xB400, 0);
 		EV_CameraPos(0, 0, -485.13f, 7.6700001f, 1917.63f);
-		EV_CameraAng(0, 200, 0xFD00, 0xC700, 0);
-		EV_Wait(60);
+		EV_CameraAng(0, 180, 0xFD00, 0xC700, 0);
+		EV_Wait(33);
 		EV_CameraPos(0, 140, -475.29999f, 6.9299998f, 1915.92f);
 		EV_SetFace(sonic, "CEAEDE");
 		EV_SerifPlay(626);
@@ -93,7 +93,6 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_MovePoint2(player, -457.17001f, 1.01f, 1913.28f, 0.56f, 0.059999999f);
 		EV_CameraAng(0, 90, 0xFD00, 0x9100, 0);
 		EV_CameraPos(0, 90, -465.53799f, 7.6700001f, 1888.11f);
-		EV_WaitMove(player);
 		EV_SetAng(player, 0, 0x7200, 0);
 		EV_Wait(40);
 		EV_SetFace(player, "EDACG");
@@ -104,7 +103,7 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_MsgClose();
-		EV_Wait(10);
+		EV_Wait(8);
 		EV_ClrFace(sonic);
 		if (VoiceLanguage == Languages_Japanese)
 		{
@@ -159,8 +158,8 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_SetAction(player, &action_m_m0104_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(PURPLE, &action_m_m0104cp_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(1);
-		EV_CameraAng(0, 20, 0xE300, 0x7500, 0);
-		EV_CameraPos(0, 20, -455.47f, 6.7399998f, 1908.0f);
+		EV_CameraAng(0, 25, 0xE700, 0x7500, 0);
+		EV_CameraPos(0, 25, -455.47f, 6.7399998f, 1908.0f);
 		EV_Wait(50);
 		EV_SetAction(sonic, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.30000001f, 1, 8);
 		EV_ClrFace(sonic);
@@ -189,19 +188,20 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_ClrAction(sonic);
 		EV_SetPos(sonic, -445.67001f, 0.0099999998f, 1901.05f);
 		EV_SetFace(player, "EACADED");
+		EV_LookObject(sonic, player, 0.0f, 6.0f, 0.0f);
 		EV_SerifPlay(633);
 		EV_Msg(msgTbl_ev0032[TextLanguage][9]); //Ага! Я нашёл один из семи.
 		EV_Wait(1);
 		EV_SerifWait();
-		EV_ClrFace(player);
+		//EV_ClrFace(player);
 		EV_Wait(20);
 		EV_SetFace(player, "DAC");
 		EV_SerifPlay(634);
 		EV_Msg(msgTbl_ev0032[TextLanguage][10]); //Думаю, этот камень\nс безграничной энергией
 		EV_Wait(1);
 		EV_SerifWait();
-		EV_ClrFace(player);
-		EV_Wait(1);
+		//EV_ClrFace(player);
+		EV_Wait(5);
 		EV_SetFace(player, "DPCDE");
 		EV_SerifPlay(635);
 		EV_Msg(msgTbl_ev0032[TextLanguage][11]); //можно как-то приспособить\nв качестве источника питания.
@@ -225,8 +225,9 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_MovePoint2(player, -450.29001f, 0.0099999998f, 1865.426f, 0.46000001f, 3.0f);
 		EV_ClrAction(player);
 		EV_ClrAction(PURPLE);
-		EV_Wait(20);
+		EV_Wait(10);
 		EV_SetFace(player, "CDAD");
+		EV_Wait(10);	  
 		EV_SerifPlay(637);
 		EV_MsgW(50, (msgTbl_ev0032[TextLanguage])[14]); //Она в Мистических руинах.
 		EV_MsgW(60, (msgTbl_ev0032[TextLanguage])[15]); //Иди на станцию и садись на поезд.
@@ -235,11 +236,11 @@ void ev0032_t_meetingsonic_tw(int state)
 		EV_MovePoint2(player, -416.5f, 0.0099999998f, 1848.1169f, 0.46000001f, 3.0f);
 		EV_Wait(1);
 		EV_SerifWait();
-		EV_ClrFace(player);		
+		EV_ClrFace(player);
 		EV_RemovePlayer(2);
 		EV_Wait(40);
 		EV_MsgClose();
-		EV_CameraTargetFree();		
+		EV_CameraTargetFree();
 		EV_Wait(1);
 		break;
 	case 2:

@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0060[] = {
+PVMEntry texTbl_ev0060_tw[] = {
 	(char*)("FPACK"), &texlist_fpack,
 	(char*)("EV_S_MSBODY"), &texlist_ev_s_msbody,
 	(char*)("ICM0060"), &texlist_icm0060,
@@ -202,8 +202,8 @@ void ev0060_a_intro1_tw(int state)
 		EV_SetFace(player, "CE");
 		EV_SerifPlay(836);
 		EV_Msg(msgTbl_ev0060[TextLanguage][3]); //"\aI miss the good old days."
-		EV_Wait(40);
 		EV_SerifWait();
+		EV_Wait(40);
 		EV_CameraPos(0, 0, 122.487f, 4.54f, 734.87f);
 		EV_CameraAng(0, 0, 0xE00, 0x9F00, 0);
 		EV_CameraPos(0, 95, 124.37f, 4.54f, 734.20001f);
@@ -410,10 +410,12 @@ void ev0060_a_intro1_tw(int state)
 		EV_LookFree(player);
 		EV_LookPoint(player, 127.0f, 11.0f, 720.0f);
 		EV_SerifWait();
-		shadow = COverlayCreate(0.0f, 0.40000001f, 0.0f, 0.0f, 0.0f);
+		shadow = COverlayCreate(0.05f, 0.01f, 0.0f, 0.0f, 0.0f);
 		EV_Wait(1);
 		BGM_Stop();
-		EV_Wait(25);
+		EV_Wait(10);
+		COverlaySetSpeed(shadow, 0.0f);
+		EV_Wait(15);
 		EV_ClrFace(player);
 		if (VoiceLanguage == Languages_Japanese)
 		{
@@ -430,6 +432,7 @@ void ev0060_a_intro1_tw(int state)
 		EV_Msg(msgTbl_ev0060[TextLanguage][10]); //"\aHey, what's going on here?\nIs there "...
 		EV_Wait(1);
 		EV_SerifWait();
+		EV_Wait(10);
 		EV_ClrFace(player);
 		EV_CameraPerspective(0, 1, 0x31C7);
 		EV_SetAction(player, &action_a_a0104_amy, &AMY_TEXLIST, 1.0f, 1, 0);

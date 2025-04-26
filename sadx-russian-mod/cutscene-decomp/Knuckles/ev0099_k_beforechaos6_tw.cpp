@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0099[] = {
+PVMEntry texTbl_ev0099_tw[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	0
 };
@@ -140,11 +140,11 @@ void ev0099_k_beforechaos6_tw(int state)
 		EV_SerifPlay(1150);
 		EV_MsgW(40, msgTbl_ev0099[TextLanguage][4]); //"\aEggman!   Come back!"
 		EV_MsgClose();
-		EV_Wait(10);
 		EV_RemovePlayer(2);
 		EV_CameraPos(0, 0, 15.56f, 749.26001f, -262.51001f);
 		EV_CameraAng(0, 0, 0x894, 0xA80C, 0);
 		EV_CameraPos(0, 360, 12.79f, 749.26001f, -258.35001f);
+		EV_Wait(10);
 		EV_Msg(msgTbl_ev0099[TextLanguage][5]); //"\aI'd better let Sonic handle it from h"...
 		EV_SerifPlay(1151);
 		EV_SetFace(player, "CEDCD");
@@ -225,7 +225,7 @@ void ev0099_k_beforechaos6_tw(int state)
 		EV_Wait(40);
 		EV_ClrFace(player);
 		EV_MsgClose();
-		EV_Wait(60);
+		EV_Wait(50);
 		break;
 	case 2:
 		EV_CameraOff();

@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0034[] = {
+PVMEntry texTbl_ev0034_tw[] = {
 	(char*)("M_EM_PURPLE"), &M_EM_PURPLE_TEXLIST,
 	(char*)("EV_EGGMOBLE0"),&EV_EGGMOBLE0_TEXLIST,
 	(char*)("MGHAND"),&MGHAND_TEXLIST,
@@ -110,9 +110,9 @@ void ev0034_t_chaos1_tw(int state)
 		EV_Wait(1);
 		EV_SetAction(C_EME_P, &action_m_m0136d_m_em_purple, &M_EM_PURPLE_TEXLIST, 0.80000001f, 1, 0);
 		EV_SetAction(player, &action_m_m0136_miles, &MILES_TEXLIST, 0.80000001f, 1, 0);
-		EV_MovePoint2(player, 975.5f, 126.5f, 842.59998f, 0.2f, 0.059999999f);
+		EV_MovePoint2(player, 983.79999f, 126.5f, 848.70001f, 0.15f, 0.059999999f); // 975.5f, 126.5f, 842.59998f
 		EV_Wait(1);
-		moveObjectOn(C_EME_P, 0.0f, 0.0f, 0.0f, 160, player);
+		moveObjectOn(C_EME_P, 0.4f, 0.0f, 0.5f, 160, player);
 		EV_ClrFace(player);
 		EV_SetFace(player, "PCPDDP");
 		EV_SerifPlay(649);
@@ -131,10 +131,10 @@ void ev0034_t_chaos1_tw(int state)
 			FreeTask(BROKEN_EGG4);
 			BROKEN_EGG4 = 0;
 		}
-		EV_SetPos(player, 983.79999f, 126.5f, 848.70001f);
-		EV_SetAng(player, 0x18, 0x8750, 0x3E);
-		EV_SetPos(sonic, 981.0f, 126.4f, 868.79999f);
-		EV_SetAng(player, 0x18, 0x1B00, 0x3E);
+		//EV_SetPos(player, 983.79999f, 126.5f, 848.70001f);
+		//EV_SetAng(player, 0x18, 0x8750, 0x3E);
+		//EV_SetPos(sonic, 981.0f, 126.4f, 868.79999f);
+		//EV_SetAng(player, 0x18, 0x1B00, 0x3E);
 		EV_CameraPos(1, 0, 1035.7f, 144.10001f, 889.5f);
 		EV_CameraAng(1, 0, 0xE813, 0xA90, 0xF1C1);
 		EV_CameraPos(1, 20, 1036.2f, 143.5f, 890.16998f);
@@ -268,7 +268,7 @@ void ev0034_t_chaos1_tw(int state)
 		EV_Wait(50);
 		EV_MsgClose();
 		stopObject(C_EME_P);
-		EV_SetAction(C_EME_P, &action_gm_gm0023cp_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.08f, 1, 0);
+		EV_SetAction(C_EME_P, &action_gm_gm0023cp_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.1f, 1, 0);
 		if(HAND_1){
 			FreeTask(HAND_1);
 			HAND_1 = 0;
@@ -301,15 +301,16 @@ void ev0034_t_chaos1_tw(int state)
 		EV_Wait(2);
 		EV_CameraPos(1, 100, 1046.87f, 148.23f, 876.47998f);
 		EV_CameraAng(1, 100, 0x4F9, 0x8BFF, 0xC1);
-		EV_Wait(30);
+		EV_Wait(60);
 		EventSe_Oneshot(1336, 128, 0, 0);
-		EV_Wait(100);
+		EV_Wait(40);
+		EventSe_Stop(1);
+		EV_Wait(30);
 		if(HAND_3){
 			FreeTask(HAND_3);
 			HAND_3 = 0;
 		}
 		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
-		EventSe_Stop(1);
 		EV_CameraPos(0, 0, 1046.23f, 143.45f, 881.0f);
 		EV_CameraAng(0, 0, 0xDFD, 0x6FFF, 0xC1);
 		EV_CameraPos(1, 90, 1046.12f, 143.78999f, 881.97998f);
@@ -324,10 +325,10 @@ void ev0034_t_chaos1_tw(int state)
 		EV_SetAng(sonic, 0x18, 0x3400, 0x3E);
 		EV_Wait(20);
 		EventSe_Play(2, 1337, 1800);
-		EventSe_Volume(2, 20, 1);
+		EventSe_Volume(2, -30, 1);
 		CreateChaos0(1091.2f, 121.5f, 866.79999f, 0, 0x800, 0, 80);
 		SetWaterChaos0();
-		EventSe_Volume(2, 30, 80);
+		//EventSe_Volume(2, 30, 80);
 		MoveChaos0(1096.2f, 126.3f, 864.79999f, 60);
 		EV_CameraPos(0, 0, 971.79999f, 128.3f, 856.70001f);
 		EV_CameraAng(0, 0, 0xAB9, 0xA9AA, 0x2C1);
@@ -342,14 +343,14 @@ void ev0034_t_chaos1_tw(int state)
 		EV_CameraAng(0, 0, 0xE821, 0xDF0C, 0xFFC1);
 		EV_CameraPos(0, 70, 1026.2f, 157.60001f, 883.59998f);
 		EV_CameraAng(0, 70, 0xE82C, 0xDA0C, 0xFFC1);
-		EventSe_Volume(2, 0, 70);
+		//EventSe_Volume(2, 0, 70);
 		EV_Wait(70);
 		EV_MsgClose();
 		EV_CameraPos(1, 0, 1040.2f, 128.0f, 849.70001f);
 		EV_CameraAng(1, 0, 0x6B9, 0x9EAA, 0xF5C1);
 		EV_CameraPos(1, 110, 1037.66f, 134.47f, 848.67999f);
 		EV_CameraAng(1, 110, 0xFB9, 0x9AAA, 0xF5C1);
-		EventSe_Volume(2, 5, 70);
+		EventSe_Volume(2, -60, 70);
 		ToHumanChaos0();
 		EV_Wait(120);
 		EV_CameraPos(1, 0, 987.20001f, 130.5f, 877.5f);
@@ -359,23 +360,27 @@ void ev0034_t_chaos1_tw(int state)
 		EV_LookPoint(player, 1052.5f, 148.60001f, 863.87f);
 		EV_SetAction(sonic, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.0f, 0, 1);
 		EV_SetAction(sonic, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.5f, 1, 1);
+		EV_SetFace(sonic, "FDC");
 		EV_SerifPlay(654);
 		EV_Msg(msgTbl_ev0034[TextLanguage][5]); //"\aThat's the monster \nI saw the other "...
-		EV_Wait(5);
-		EV_MsgW(20, msgTbl_ev0034[TextLanguage][6]); //"\aUh, Monster?"
-		if (VoiceLanguage == Languages_Japanese)
-		{
-			EV_SetFace(player, "BBABB");
-		}
-		if (VoiceLanguage == Languages_English)
-		{
-			EV_SetFace(player, "CCCCC");
-		}
+		EV_Wait(40);
+		EV_ClrFace(sonic);
+		EV_MsgClose();
 		EV_ClrFace(player);
 		EV_SetFace(player, "ABAAAAAAAABAAAAABAAAAAAB");
 		EV_SerifPlay(655);
 		EV_SetFace(player, "AB");
-		EV_Wait(40);
+		if (VoiceLanguage == Languages_Japanese)
+		{
+			EV_SetFace(player, "BBABB");
+			EV_Wait(20);
+		}
+		if (VoiceLanguage == Languages_English)
+		{
+			EV_Msg(msgTbl_ev0034[TextLanguage][6]); //"\aUh, Monster?"
+			EV_SetFace(player, "CCCCC");
+			EV_Wait(40);
+		}
 		EV_ClrFace(player);
 		EV_MsgClose();
 		EV_Wait(20);
@@ -385,8 +390,9 @@ void ev0034_t_chaos1_tw(int state)
 		EV_CameraPos(1, 80, 1006.66f, 134.89999f, 859.0f);
 		EV_CameraAng(1, 80, 0x3B9, 0xBEAA, 0xFEC1);
 		EV_SetAction(eggmoble, &action_gm_gm0024_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 8);
-		moveObjectAngle2(C_EME_P, 1052.5f, 123.6f, 873.29999f, 1070.5f, 130.7f, 847.27002f, 0, 0, 0, 0, 0x4000, 0x3000, 55);
-		EV_Wait(50);
+		EV_Wait(25);
+		moveObjectAngle2(C_EME_P, 1052.5f, 123.6f, 891.29999f, 1070.5f, 121.6f, 855.27002f, 0, 0, 0, 0, 0, 0x3000, 32);
+		EV_Wait(25);
 		crushLightOn(1051.2f, 136.0f, 857.79999f, 3, 10, 0.40000001f, 2.0f, 0xFFFF64FF, 0xFF1EFF);
 		EV_Wait(8);
 		EV_FreeObject(&C_EME_P);
@@ -407,8 +413,8 @@ void ev0034_t_chaos1_tw(int state)
 		EV_CameraAng(1, 0, 0x1AB9, 0xD6AA, 0xFEC1);
 		EV_CameraPos(1, 100, 1033.26f, 127.45f, 866.25f);
 		EV_CameraAng(1, 100, 0x21B9, 0xD3AA, 0xFEC1);
-		EventSe_Play(2, 1337, 1800);
-		EventSe_Volume(2, -20, 1);
+		//EventSe_Play(2, 1337, 1800);
+		//EventSe_Volume(2, -100, 1);
 		EV_Wait(30);
 		crushLightOff();
 		COverlaySetSpeed(FLASH, -0.02f);
@@ -453,12 +459,14 @@ void ev0034_t_chaos1_tw(int state)
 		EV_SerifPlay(659);
 		EV_Msg(msgTbl_ev0034[TextLanguage][11]); //"\aAll he needs is 7 Emeralds\nto become"...
 		EV_SerifWait();
+		EV_Wait(6);
 		EV_SerifPlay(660);
 		ChgEggMobleMod(5);
 		EV_Wait(2);
 		EV_SetAction(eggmoble, &action_gm_gm0020_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 0);
 		EV_Msg(msgTbl_ev0034[TextLanguage][12]); //"\aThen he will turn Station Square\nint"...
 		EV_SerifWait();
+		EV_Wait(10);
 		EV_CameraPos(1, 0, 1039.7f, 156.60001f, 894.56f);
 		EV_CameraAng(1, 0, 0xE6B9, 0xE0AA, 0);
 		EV_CameraPos(1, 100, 1036.8f, 147.17999f, 880.17999f);
@@ -468,6 +476,7 @@ void ev0034_t_chaos1_tw(int state)
 		EV_SetAction(eggmoble, &action_gm_gm0022_eggmoble, &EV_EGGMOBLE0_TEXLIST, 0.89999998f, 0, 8);
 		EV_SetAction(eggmoble, &action_gm_gm0021_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 8);
 		EV_SerifWait();
+		EV_Wait(5);
 		EV_SetAction(eggmoble, &action_gm_gm0020_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.3f, 1, 0);
 		EV_CameraPos(1, 0, 1009.0f, 133.39999f, 851.79999f);
 		EV_CameraAng(1, 0, 0x5B9, 0xADAA, 0xFC00);
@@ -498,6 +507,7 @@ void ev0034_t_chaos1_tw(int state)
 		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.89999998f, 1, 0);
 		FLASH = COverlayCreate(0.1f, 0.050000001f, 1.0f, 1.0f, 0.89999998f);
 		EV_Wait(5);
+		//EventSe_Stop(2);
 		EventSe_Oneshot(1339, 120, 0, 0);
 		EV_Wait(30);
 		crushLightOff();
@@ -513,7 +523,6 @@ void ev0034_t_chaos1_tw(int state)
 			FLASH = 0;
 		}
 		EV_Wait(10);
-		EventSe_Stop(2);
 		EV_CameraPos(1, 0, 970.59998f, 155.39999f, 855.59998f);
 		EV_CameraAng(1, 0, 0x309, 0xB6AA, 0);
 		EV_SetPos(sonic, 968.0f, 126.6f, 858.0f);
@@ -526,10 +535,11 @@ void ev0034_t_chaos1_tw(int state)
 		EV_MovePoint2(player, 997.0f, 126.6f, 857.94f, 1.0f, 0.1f);
 		EV_WaitMove(sonic);
 		EV_WaitMove(player);
-		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
+		//EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
+		EV_ClrAction(sonic);
 		EV_SetAction(player, MILES_ACTIONS[79], &MILES_TEXLIST, 1.0f, 1, 1);
 		EV_Wait(20);
-		EV_SetAng(sonic, 0, 0x5C00, 0);
+		EV_SetAng(sonic, 0, 0x6C00, 0);
 		EV_SetPos(player, 1013.0f, 126.6f, 862.5f);
 		EV_SetAng(player, 0, 0xFD00, 0);
 		EV_CameraPos(1, 0, 1023.4f, 129.5f, 859.09998f);
@@ -542,12 +552,13 @@ void ev0034_t_chaos1_tw(int state)
 		EV_SerifWait();
 		EV_ClrFace(sonic);
 		EV_SetFace(sonic, "CDDDCDCCCDE");
+		EV_LookPoint(sonic, 1013.0f, 130.0f, 862.5f);
 		EV_SerifPlay(664);
 		EV_Msg(msgTbl_ev0034[TextLanguage][17]); //"\aWe can't let that monster get\nany bi"...
 		EV_SerifWait();
 		EV_ClrFace(sonic);
 		EV_MsgClose();
-		EV_SetAng(sonic, 0, 0x1900, 0);
+		//EV_SetAng(sonic, 0, 0x1900, 0);
 		EV_CameraPos(1, 0, 1012.0f, 132.5f, 885.79999f);
 		EV_CameraAng(1, 0, 0x1B9, 0xAAA, 0xFE00);
 		EV_CameraPos(1, 140, 1013.4f, 132.39999f, 890.5f);
@@ -561,6 +572,7 @@ void ev0034_t_chaos1_tw(int state)
 		EV_SerifPlay(666);
 		EV_Msg(msgTbl_ev0034[TextLanguage][19]); //"\aAnd he can be if we keep him\naway fr"...
 		EV_SerifWait();
+		EV_Wait(10);
 		EV_ClrFace(player);
 		EV_CameraPos(1, 0, 1019.15f, 128.17999f, 874.40002f);
 		EV_CameraAng(1, 0, 0xAB9, 0x15AA, 0xFE00);

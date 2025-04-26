@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev00B4[] = {
+PVMEntry texTbl_ev00B4_tw[] = {
 	(char*)("EV_E101_BODY"), &texlist_ev_e101_body,
 	(char*)("EV_E101_FUN"), &EV_E101_FUN_TEXLIST,
 	0
@@ -38,7 +38,7 @@ void ev00B4_e_e101_tw(int state)
 		EV_CameraAng(0, 0, 0xFAA5, 0xC150, 0);
 		EV_SerifPlay(1186);
 		EV_MsgW(0, msgTbl_ev00B4[TextLanguage][0]); //"\aOkay then, Gamma... \nHere's your tes"...
-		EV_Wait(50);		
+		EV_Wait(50);
 		EV_ClrAction(eggman);
 		EV_SetAction(eggman, &action_g_g0002_eggman, &EGGMAN_TEXLIST, 1.0f, 1, 0);
 		EV_MovePoint2(eggman, -36.970001f, 0.5f, 0.66000003f, 0.15000001f, 0.059999999f);
@@ -46,9 +46,7 @@ void ev00B4_e_e101_tw(int state)
 		EV_MsgW(130, msgTbl_ev00B4[TextLanguage][1]); //"\aIf you want to stay on board, \nyou m"...
 		EV_MsgW(90, msgTbl_ev00B4[TextLanguage][2]); //"\aSo pay attention to what I say."
 		EV_Wait(1);
-		EV_MsgClose();
 		EV_SetAction(player, &action_e_e0006_e102, &E102_TEXLIST, 0.5f, 0, 16);
-		EV_Wait(20);
 		EV_WaitAction(player);
 		EV_SetPos(player, -15.54f, 0.44999999f, -10.36f);
 		EV_SetAng(player, 0, 0xC8D1, 0);
@@ -56,7 +54,7 @@ void ev00B4_e_e101_tw(int state)
 		EV_CameraAng(0, 0, 0xF1A5, 0x3D50, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, E102_ACTIONS[0], &E102_TEXLIST, 1.0f, 1, 0);
-		EV_Wait(30);
+		EV_Wait(1);
 		EV_SetAction(eggman, &action_g_g0022_eggman, &EGGMAN_TEXLIST, 1.0f, 0, 0);
 		EV_Wait(1);
 		EV_WaitAction(eggman);
@@ -175,29 +173,33 @@ void ev00B4_e_e101_tw(int state)
 		EV_CameraPos(0, 100, -51.610001f, 27.040001f, -28.780001f);
 		EV_CameraAng(0, 100, 0xF1A5, 0xB350, 0);
 		EV_Wait(60);
-		moveObject(e101, 9.9799995f, 14.5f, -4.1500001f, 77.610001f, 14.5f, 14.89f, 30);
-		EventSe_Play(0, 831, 1800);
-		EventSe_Volume(0, 200, 1);
-		SMOKE = CObjSmoke_Create();
-		if (SMOKE)
-		{
-			*(float*)(SMOKE->twp->value.l + 44) = 250.0f;
-			*(float*)(SMOKE->twp->value.l + 48) = 250.0f;
-			*(float*)(SMOKE->twp->value.l + 52) = 250.0f;
-			*(float*)(SMOKE->twp->value.l + 56) = 250.0f;
-			SMOKE->twp->ang.y = 2;
-			SMOKE->twp->ang.x = 2;
-		}
-		moveObject(SMOKE, 9.9799995f, 2.5f, -4.1500001f, 77.610001f, 2.5f, 14.89f, 30);
-		EV_Wait(20);
-		EventSe_Stop(0);
-		stopObject(SMOKE);
-		if (SMOKE)
-		{
-			SMOKE->twp->ang.y = 0;
-			SMOKE->twp->ang.x = 0;
-		}
-		EV_Wait(60);
+		/*if (betaDash)
+		{*/
+			moveObject(e101, 9.9799995f, 14.5f, -4.1500001f, 77.610001f, 14.5f, 14.89f, 30);
+			EventSe_Play(0, 831, 1800);
+			EventSe_Volume(0, 200, 1);
+			SMOKE = CObjSmoke_Create();
+			if (SMOKE)
+			{
+				*(float*)(SMOKE->twp->value.l + 44) = 250.0f;
+				*(float*)(SMOKE->twp->value.l + 48) = 250.0f;
+				*(float*)(SMOKE->twp->value.l + 52) = 250.0f;
+				*(float*)(SMOKE->twp->value.l + 56) = 250.0f;
+				SMOKE->twp->ang.y = 2;
+				SMOKE->twp->ang.x = 2;
+			}
+			moveObject(SMOKE, 9.9799995f, 2.5f, -4.1500001f, 77.610001f, 2.5f, 14.89f, 30);
+			EV_Wait(20);
+			EventSe_Stop(0);
+			stopObject(SMOKE);
+			if (SMOKE)
+			{
+				SMOKE->twp->ang.y = 0;
+				SMOKE->twp->ang.x = 0;
+			}
+		//}
+		EV_SerifWait();
+		EV_Wait(8);
 		EV_MsgClose();
 		stopObject(e101);
 		break;

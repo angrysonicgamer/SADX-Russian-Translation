@@ -4,7 +4,7 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventVariables.h"
 
-PVMEntry texTbl_ev0062[] = {
+PVMEntry texTbl_ev0062_tw[] = {
 	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
 	0
@@ -94,25 +94,25 @@ void ev0062_a_meetsonic_tw(int state)
 		EV_LookObject(player, sonic, 0.0f, 7.0f, 0.0f);
 		EV_ClrAction(player);
 		EV_SetAction(player, AMY_ACTIONS[44], &AMY_TEXLIST, 1.0f, 1, 16);
-		EV_MovePoint2(player, -528.20001f, 0.0f, 1240.0f, 0.30000001f, 3.0f);
-		moveObjectOn(KOTORI2, 4.8000002f, 7.5f, 0.40000001f, 230, player);
+		EV_MovePoint2(player, -534.20001f, 0.0f, 1221.0f, 0.3f, 3.0f);
+		moveObjectOn(KOTORI2, 4.8000002f, 7.5f, 0.40000001f, 140, player);
 		EV_MsgClose();
 		EV_SetFace(player, "R");
 		EV_SerifPlay(859);
 		EV_Msg(msgTbl_ev0062[TextLanguage][2]); //"\aSo-nic!"
-		EV_Wait(10);
+		EV_Wait(5);
 		EV_CameraPos(1, 0, -512.66998f, 6.1300001f, 1315.1801f);
 		EV_CameraAng(1, 0, 0x100, 0x1D00, 0);
 		EV_CameraChase(player);
-		EV_Wait(70);
+		EV_Wait(20);
 		EV_ClrFace(player);
 		EV_MsgClose();
 		EV_SetAction(sonic, &action_s_s0002_sonic, &SONIC_TEXLIST, 0.25f, 0, 4);
-		EV_Wait(60);
+		EV_Wait(15);
 		EV_CameraChaseFree();
 		EV_CameraPos(1, 0, -529.40997f, 4.9000001f, 1256.3199f);
 		EV_CameraAng(1, 0, 0x200, 0x8800, 0);
-		EV_SetPos(player, -525.5f, 0.02f, 1280.9f);
+		//EV_SetPos(player, -525.5f, 0.02f, 1280.9f);
 		EV_SetAng(player, 0, 0x8000, 0);
 		EV_SetPos(KOTORI2,
 			player->twp->pos.x + 4.8000002f,
@@ -120,22 +120,24 @@ void ev0062_a_meetsonic_tw(int state)
 			player->twp->pos.z + 0.4f);
 		EV_ClrAction(player);
 		EV_SetAction(player, AMY_ACTIONS[44], &AMY_TEXLIST, 1.0f, 1, 8);
-		EV_MovePoint2(player, -534.20001f, 0.0f, 1221.0f, 0.5f, 3.0f);
+		//EV_MovePoint2(player, -534.20001f, 0.0f, 1221.0f, 0.5f, 3.0f);
 		moveObjectOn(KOTORI2, 4.8000002f, 7.5f, 0.40000001f, 140, player);
 		EV_Wait(1);
 		EV_CameraChase(player);
-		EV_Wait(50);
+		EV_Wait(30);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 16);
 		EV_SetAng(sonic, 0, 0xFE90, 0);
 		EV_CameraChaseFree();
 		EV_CameraPos(1, 60, -514.03998f, 7.6999998f, 1216.6f);
 		EV_CameraAng(1, 60, 0xF955, 0x39C3, 0);
+		EV_MovePoint2(player, -534.20001f, 0.0f, 1221.0f, 0.45f, 3.0f);
 		EV_Wait(50);
 		EV_SetFace(player, "G");
 		EV_SerifPlay(860);
 		EV_Msg(msgTbl_ev0062[TextLanguage][3]); //"\aLong time no see..."
 		EV_Wait(12);
+		EV_WaitMove(player);
 		EV_ClrAction(player);
 		EV_Wait(1);
 		EV_SetAction(player, AMY_ACTIONS[56], &AMY_TEXLIST, 1.0f, 0, 8);
@@ -155,14 +157,14 @@ void ev0062_a_meetsonic_tw(int state)
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, &action_s_s0037_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 16);
 		moveObject(sonic, -534.20001f, 0.0f, 1204.0f, -534.20001f, 0.0f, 1194.0f, 40);
-		EV_Wait(42);
+		EV_Wait(40);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, &action_s_s0021_sonic, &SONIC_TEXLIST, 1.25f, 1, 4);
 		EV_ClrFace(sonic);
 		EV_MsgClose();
 		EV_CameraPos(0, 40, -516.84998f, 4.4099998f, 1187.33f);
 		EV_CameraAng(0, 40, 0x255, 0x59C3, 0);
-		EV_Wait(40);
+		EV_Wait(10);
 		EV_SetPos(KOTORI2,
 			player->twp->pos.x + 4.8000002f,
 			player->twp->pos.y + 7.5f,
@@ -171,7 +173,7 @@ void ev0062_a_meetsonic_tw(int state)
 		EV_CameraAng(1, 60, 0x255, 0x53C3, 0);
 		EV_Wait(10);
 		EV_MovePoint2(player, -534.20001f, 0.0f, 1215.0f, 0.5f, 3.0f);
-		moveObjectOn(KOTORI2, 4.8000002f, 7.5f, 0.40000001f, 100, player);
+		moveObjectOn(KOTORI2, 4.8000002f, 7.5f, 0.40000001f, 70, player);
 		EV_ClrFace(player);
 		EV_SetFace(player, "EAG");
 		EV_SerifPlay(862);
@@ -197,7 +199,7 @@ void ev0062_a_meetsonic_tw(int state)
 		EV_MsgW(80, msgTbl_ev0062[TextLanguage][6]); //"\aSee, this little birdie's got in trou"...
 		EV_MsgW(100, msgTbl_ev0062[TextLanguage][7]); //"\aI think you should be his bodyguard "...
 		EV_MsgClose();
-		EV_Wait(18);
+		EV_Wait(10);
 		EV_ClrFace(player);
 		EV_LookObject(player, sonic, 0.0f, 7.0f, 0.0f);
 		EV_CameraPos(1, 0, -509.20001f, 11.52f, 1213.24f);
@@ -232,7 +234,7 @@ void ev0062_a_meetsonic_tw(int state)
 		EV_MsgClose();
 		EV_ClrAction(player);
 		EV_SetAction(player, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 16);
-		EV_Wait(60);
+		EV_Wait(30);
 		EV_CameraPos(1, 0, -524.28998f, 7.2600002f, 1217.85f);
 		EV_CameraAng(1, 0, 0xF955, 0x1BC3, 0);
 		EV_ClrAction(sonic);
@@ -250,12 +252,12 @@ void ev0062_a_meetsonic_tw(int state)
 		EV_PlayPad(2, &EV0062AT);
 		EV_Wait(1);
 		EV_MsgClose();
-		EV_Wait(40);
+		EV_Wait(30);
 		EV_ClrAction(player);
 		EV_SetAction(player, AMY_ACTIONS[44], &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_CameraChase(player);
 		EV_MovePoint2(player, -537.53998f, 0.0f, 1127.25f, 0.60000002f, 0.0f);
-		EV_Wait(10);
+		EV_Wait(5);
 		EV_SerifPlay(867);
 		EV_Msg(msgTbl_ev0062[TextLanguage][11]); //"\aCome on, don't run away.\nOhhhhhhhh.."...
 		EV_Wait(70);
@@ -263,6 +265,8 @@ void ev0062_a_meetsonic_tw(int state)
 		EV_MsgClose();
 		EV_CameraChaseFree();
 		EV_Wait(40);
+		EV_ClrAction(player);
+		EV_Wait(20);
 		break;
 	case 2:
 		stopObjectAll();
