@@ -255,6 +255,9 @@
     <ClCompile Include="cutscene-decomp\SuperSonic\ev00FF_l_supersonic_tw.cpp">
       <Filter>Cutscene Decomp\7 Last</Filter>
     </ClCompile>
+    <ClCompile Include="cutscene-decomp\TweakedCutscenesConfig.cpp">
+      <Filter>Cutscene Decomp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -310,6 +313,9 @@
     </ClInclude>
     <ClInclude Include="LanguageSetting.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cutscene-decomp\TweakedCutscenesConfig.h">
+      <Filter>Cutscene Decomp</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
