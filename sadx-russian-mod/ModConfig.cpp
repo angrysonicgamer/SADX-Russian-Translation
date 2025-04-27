@@ -4,6 +4,7 @@
 #include "CustomSubTimings.h"
 #include "ExtraSubs.h"
 #include "LoadTextures.h"
+#include "cutscene-decomp/TweakedCutscenesConfig.h"
 #include "IniFile.hpp"
 #include <fstream>
 
@@ -85,9 +86,14 @@ void InitCustomCutsceneTimings(const char* path, const HelperFunctions& helperFu
 	{
 		helperFunctions.LoadEXEData((modpath + editedTimings).c_str(), modpath.c_str());
 		if (LoadedMods::Cream || LoadedMods::Rouge)
+		{
 			DisplayMessage(CutsceneEditingModsMessage);
+		}			
 		else if (LoadedMods::TweakedCutscenes)
-			SetCustomCutsceneTimingsTweaked(path, helperFunctions);		
+		{
+			TweakedCutscenesConfig::Read(helperFunctions);
+			SetCustomCutsceneTimingsTweaked(path, helperFunctions);
+		}					
 		else SetCustomCutsceneTimings(path, helperFunctions);		
 	}
 }

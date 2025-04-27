@@ -104,6 +104,7 @@
     <ClCompile Include="cutscene-decomp\Tails\tweaked\ev0034_t_chaos1_tw.cpp" />
     <ClCompile Include="cutscene-decomp\Tails\tweaked\ev003A_t_afterchaos4_tw.cpp" />
     <ClCompile Include="cutscene-decomp\Tails\tweaked\ev004B_t_eggmantakesbirdie_tw.cpp" />
+    <ClCompile Include="cutscene-decomp\TweakedCutscenesConfig.cpp" />
     <ClCompile Include="LanguageSetting.cpp" />
     <ClCompile Include="LoadedMods.cpp" />
     <ClCompile Include="TextureFontSetup.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="VariousText.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cutscene-decomp\TweakedCutscenesConfig.h" />
     <ClInclude Include="LanguageSetting.h" />
     <ClInclude Include="LoadedMods.h" />
     <ClInclude Include="TextureFontSetup.h" />
