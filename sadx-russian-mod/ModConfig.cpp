@@ -4,9 +4,9 @@
 #include "CustomSubTimings.h"
 #include "ExtraSubs.h"
 #include "LoadTextures.h"
-#include "cutscene-decomp/TweakedCutscenesConfig.h"
 #include "IniFile.hpp"
 #include <fstream>
+#include "..\Other Mods\TweakedCutscenesConfig.h"
 
 
 // Warning messages
@@ -15,16 +15,6 @@ void DisplayMessage(std::wstring message)
 {
 	MessageBox(NULL, message.c_str(), L"Предупреждение", MB_OK | MB_ICONWARNING | MB_DEFBUTTON2);
 }
-
-//std::wstring JPVoiceMessage =
-//	L"Мод принудительно включает японскую озвучку.\n\n"
-//	L"Это сделано из-за того, что между\n"
-//	L"японской и английской версией озвучки игры\n"
-//	L"есть значительные расхождения в некоторых катсценах\n"
-//	L"(другую реплику произносит другой персонаж).\n\n"
-//	L"Вы можете отключить эту функцию в настройках\n"
-//	L"к моду с переводом.\n"
-//	L"При следующем запуске это сообщение не появится.";
 
 std::wstring CutsceneEditingModsMessage =
 	L"У вас включён один из модов, изменяющих катсцены:\n\n"
@@ -89,37 +79,13 @@ void InitCustomCutsceneTimings(const char* path, const HelperFunctions& helperFu
 		{
 			DisplayMessage(CutsceneEditingModsMessage);
 		}			
-		else if (LoadedMods::TweakedCutscenes)
+		else 
 		{
 			TweakedCutscenesConfig::Read(helperFunctions);
-			SetCustomCutsceneTimingsTweaked(path, helperFunctions);
-		}					
-		else SetCustomCutsceneTimings(path, helperFunctions);		
+			SetCustomCutsceneTimings(path, helperFunctions);
+		}				
 	}
 }
-
-/*void InitJPVoiceFlag(const char* path)
-{
-	// Обработка форса происходит в основном файле мода (mod.cpp), в файле конфига обрабатывается 
-	// только вывод сообщения и обработка флаг-файла
-
-	std::string flagPath = "\\jap-voice-flag";
-
-	if (!Config::ForceJPVoice)	// Если опция форса выключена (то есть не форсируется яп)
-		remove((path + flagPath).c_str());	// Удалить нахер флаг
-	else
-	{
-		std::ifstream flagFile(path + flagPath);
-
-		// При отсутствии флаг-файла 
-		if (!flagFile)
-		{
-			DisplayMessage(JPVoiceMessage);
-			std::ofstream flagFileOut(path + flagPath);	// Создать флаг-файл
-			flagFileOut.close();
-		}
-	}
-}*/
 
 void LoadAlternateSonicTeamFMV(const HelperFunctions& helperFunctions)
 {
@@ -138,10 +104,7 @@ void Config::Init(const char* path, const HelperFunctions& helperFunctions)
 {
 	Read(path);
 	
-	//LoadTitleScreenButton(path, helperFunctions);	
-
 	InitCustomCutsceneTimings(path, helperFunctions);
-	//InitJPVoiceFlag(path);
 
 	if (AltSonicTeamLogo != "Disable")
 	{

@@ -20,7 +20,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -67,7 +67,7 @@
       <WarningLevel>Level3</WarningLevel>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\sadx-russian-mod\cutscene-decomp\include;$(ProjectDir)..\sadx-mod-loader\mod-loader-common\ModLoaderCommon;$(ProjectDir)..\sadx-mod-loader\SADXModLoader\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\sadx-russian-mod\cutscene-decomp;$(ProjectDir)..\sadx-russian-mod\cutscene-decomp\include;$(ProjectDir)..\sadx-mod-loader\mod-loader-common\ModLoaderCommon;$(ProjectDir)..\sadx-mod-loader\SADXModLoader\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -79,34 +79,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cutscene-decomp\Amy\tweaked\ev0060_a_intro1_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Amy\tweaked\ev0061_a_intro2_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Amy\tweaked\ev0062_a_meetsonic_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Big\ev00D8_b_eggcarrier_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Big\ev00DE_b_chaos6_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\E102\tweaked\ev00B4_e_e101_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\E102\tweaked\ev00B7_e_fanfare_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\E102\tweaked\ev00BB_e_deliverfrog_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Knuckles\ev0099_k_beforechaos6_tw.cpp" />
     <ClCompile Include="cutscene-decomp\Sonic\ev0024_s_eggviper.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0006_s_poolsidewithtails_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0008_s_chaos1_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev000C_s_afterchaos4_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0012_s_meetingamy_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0013_s_beforetwinklepark_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001C_s_beforechaos6_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001D_s_afterchaos6_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001E_s_lostworld_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0024_s_eggviper_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\SuperSonic\ev00FF_l_supersonic_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev0032_t_meetingsonic_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev0033_t_egghornet_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev0034_t_chaos1_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev003A_t_afterchaos4_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev004B_t_eggmantakesbirdie_tw.cpp" />
-    <ClCompile Include="cutscene-decomp\TweakedCutscenesConfig.cpp" />
     <ClCompile Include="LanguageSetting.cpp" />
     <ClCompile Include="LoadedMods.cpp" />
+    <ClCompile Include="Other Mods\BetaRestoresConfig.cpp" />
+    <ClCompile Include="Other Mods\DreamcastConversionConfig.cpp" />
+    <ClCompile Include="Other Mods\TweakedCutscenesConfig.cpp" />
     <ClCompile Include="TextureFontSetup.cpp" />
     <ClCompile Include="OtherModsText.cpp" />
     <ClCompile Include="cutscene-decomp\Amy\ev0060_a_intro1.cpp" />
@@ -152,9 +130,11 @@
     <ClCompile Include="VariousText.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cutscene-decomp\TweakedCutscenesConfig.h" />
     <ClInclude Include="LanguageSetting.h" />
     <ClInclude Include="LoadedMods.h" />
+    <ClInclude Include="Other Mods\BetaRestoresConfig.h" />
+    <ClInclude Include="Other Mods\DreamcastConversionConfig.h" />
+    <ClInclude Include="Other Mods\TweakedCutscenesConfig.h" />
     <ClInclude Include="TextureFontSetup.h" />
     <ClInclude Include="cutscene-decomp\include\SADXEventFunctions.h" />
     <ClInclude Include="cutscene-decomp\include\SADXEventList.h" />

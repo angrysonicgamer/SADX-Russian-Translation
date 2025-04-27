@@ -2,6 +2,7 @@
 #include "OtherModsText.h"
 #include "LoadedMods.h"
 #include "IniFile.hpp"
+#include "..\Other Mods\BetaRestoresConfig.h"
 
 
 // Fixes, Adds and Beta Restores (based on supercoolsonic's source code)
@@ -106,13 +107,8 @@ void __cdecl ChaoCardLanguageAdds()
 
 void OverwriteBetaRestoresText(const HelperFunctions& helperFunctions)
 {
-	if (!LoadedMods::BetaRestores) return;
-	
-	auto betaRestoresMod = helperFunctions.Mods->find_by_dll(LoadedMods::BetaRestores);
-	IniFile betaRestoresConfig(std::string(betaRestoresMod->Folder) + "\\config.ini");
-	bool bigBetaHotel = betaRestoresConfig.getBool("Options1", "BigBetaHotel", false);
-
-	if (bigBetaHotel)
+	BetaRestoresConfig::Read(helperFunctions);
+	if (BetaRestoresConfig::BigBetaHotel)
 	{
 		WriteCall((void*)0x6368DE, KeyBlockLanguageAdds);
 	}

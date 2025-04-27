@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Cutscene Decomp">
       <UniqueIdentifier>{acbe7cc6-c4a9-4c7e-8c44-99c1d891d991}</UniqueIdentifier>
     </Filter>
@@ -40,17 +36,8 @@
     <Filter Include="Cutscene Decomp\7 Last">
       <UniqueIdentifier>{24b445ff-0742-4e42-b894-f168d5155c13}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Cutscene Decomp\1 Sonic\tweaked">
-      <UniqueIdentifier>{2b1db27e-ec70-48c6-b9b0-d213b3a79196}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Cutscene Decomp\2 Tails\tweaked">
-      <UniqueIdentifier>{e4c4f285-7d07-4c44-8135-973f747fd870}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Cutscene Decomp\4 Amy\tweaked">
-      <UniqueIdentifier>{546dc0cb-a5f2-4b49-a44b-45578136ee38}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Cutscene Decomp\6 Gamma\tweaked">
-      <UniqueIdentifier>{12413c65-2c72-41a3-9206-0efc67f5890f}</UniqueIdentifier>
+    <Filter Include="Other Mods">
+      <UniqueIdentifier>{44d3bb04-7650-47e8-b836-af3e55e0983e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -183,80 +170,14 @@
     <ClCompile Include="LanguageSetting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev000C_s_afterchaos4_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    <ClCompile Include="Other Mods\DreamcastConversionConfig.cpp">
+      <Filter>Other Mods</Filter>
     </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0006_s_poolsidewithtails_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
+    <ClCompile Include="Other Mods\TweakedCutscenesConfig.cpp">
+      <Filter>Other Mods</Filter>
     </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0008_s_chaos1_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0012_s_meetingamy_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0013_s_beforetwinklepark_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001C_s_beforechaos6_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001D_s_afterchaos6_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev001E_s_lostworld_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Sonic\tweaked\ev0024_s_eggviper_tw.cpp">
-      <Filter>Cutscene Decomp\1 Sonic\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev003A_t_afterchaos4_tw.cpp">
-      <Filter>Cutscene Decomp\2 Tails\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev0032_t_meetingsonic_tw.cpp">
-      <Filter>Cutscene Decomp\2 Tails\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev0033_t_egghornet_tw.cpp">
-      <Filter>Cutscene Decomp\2 Tails\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev0034_t_chaos1_tw.cpp">
-      <Filter>Cutscene Decomp\2 Tails\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Tails\tweaked\ev004B_t_eggmantakesbirdie_tw.cpp">
-      <Filter>Cutscene Decomp\2 Tails\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Knuckles\ev0099_k_beforechaos6_tw.cpp">
-      <Filter>Cutscene Decomp\3 Knux</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Amy\tweaked\ev0060_a_intro1_tw.cpp">
-      <Filter>Cutscene Decomp\4 Amy\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Amy\tweaked\ev0061_a_intro2_tw.cpp">
-      <Filter>Cutscene Decomp\4 Amy\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Amy\tweaked\ev0062_a_meetsonic_tw.cpp">
-      <Filter>Cutscene Decomp\4 Amy\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\E102\tweaked\ev00B7_e_fanfare_tw.cpp">
-      <Filter>Cutscene Decomp\6 Gamma\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\E102\tweaked\ev00B4_e_e101_tw.cpp">
-      <Filter>Cutscene Decomp\6 Gamma\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\E102\tweaked\ev00BB_e_deliverfrog_tw.cpp">
-      <Filter>Cutscene Decomp\6 Gamma\tweaked</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Big\ev00D8_b_eggcarrier_tw.cpp">
-      <Filter>Cutscene Decomp\5 Big</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\Big\ev00DE_b_chaos6_tw.cpp">
-      <Filter>Cutscene Decomp\5 Big</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\SuperSonic\ev00FF_l_supersonic_tw.cpp">
-      <Filter>Cutscene Decomp\7 Last</Filter>
-    </ClCompile>
-    <ClCompile Include="cutscene-decomp\TweakedCutscenesConfig.cpp">
-      <Filter>Cutscene Decomp</Filter>
+    <ClCompile Include="Other Mods\BetaRestoresConfig.cpp">
+      <Filter>Other Mods</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -314,8 +235,14 @@
     <ClInclude Include="LanguageSetting.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="cutscene-decomp\TweakedCutscenesConfig.h">
-      <Filter>Cutscene Decomp</Filter>
+    <ClInclude Include="Other Mods\DreamcastConversionConfig.h">
+      <Filter>Other Mods</Filter>
+    </ClInclude>
+    <ClInclude Include="Other Mods\TweakedCutscenesConfig.h">
+      <Filter>Other Mods</Filter>
+    </ClInclude>
+    <ClInclude Include="Other Mods\BetaRestoresConfig.h">
+      <Filter>Other Mods</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
