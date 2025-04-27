@@ -117,13 +117,13 @@ const char* GameGearTitles[] //до 42 символов на название (4
 
 // Chao Garden text
 
-HintText_Text AboutChaoGarden[] = {
+HintMessageString AboutChaoGarden[] = {
 		{ "\aЭто сад Чао.", 120 },
 		{ "\aЕсли принести сюда яйца, найденные\nна уровнях, из них вылупятся Чао.", 360 },
 		{ 0 }
 };
 
-HintText_Text AboutChaoEggs[] = {
+HintMessageString AboutChaoEggs[] = {
 	{ "\aЯйцо может созреть само\nпо себе спустя время, но...", 180 },
 	{ "\aТы можешь ускорить созревание,\nпокачав яйцо на руках.", 180 },
 	{ "\aХарактер Чао будет меняться\nв зависимости от того,", 180 },
@@ -131,13 +131,13 @@ HintText_Text AboutChaoEggs[] = {
 	{ 0 }
 };
 
-HintText_Text AboutLittleAnimals[] = {
+HintMessageString AboutLittleAnimals[] = {
 	{ "\aЧао изменится, если дать ему\nмаленькое животное.", 180 } ,
 	{ "\aПопробуй давать Чао\nразных животных.", 180 } ,
 	{ 0 }
 };
 
-HintText_Text AboutFeedingBreedingEtc[] = {
+HintMessageString AboutFeedingBreedingEtc[] = {
 	{ "\a'Как кормить Чао'", 0 } ,
 	{ "\aЧао очень любят плоды с деревьев.", 0 } ,
 	{ "\aВстаньте перед деревом\nи потрясите его,", 0 } ,
@@ -155,7 +155,7 @@ HintText_Text AboutFeedingBreedingEtc[] = {
 	{ 0 }
 };
 
-HintText_Text AboutWarphole[] = {
+HintMessageString AboutWarphole[] = {
 	{ "\a'Портал'", 0 } ,
 	{ "\aЭто портал.", 0 } ,
 	{ "\aЧерез него можно попасть в те\nсады, где вы уже побывали.", 0 } ,
@@ -163,7 +163,7 @@ HintText_Text AboutWarphole[] = {
 	{ 0 }
 };
 
-HintText_Text AboutNameMachine[] = {
+HintMessageString AboutNameMachine[] = {
 	{ "\a'Машина имён'", 0 } ,
 	{ "\aЭта машина позволяет дать\nЧао имя.", 0 } ,
 	{ "\aВозьмите Чао и положите его\nна красную кнопку.", 0 } ,
@@ -171,12 +171,12 @@ HintText_Text AboutNameMachine[] = {
 	{ 0 }
 };
 
-HintText_Text AboutChaoStadium[] = {
+HintMessageString AboutChaoStadium[] = {
 	{ "\aДобро пожаловать на стадион Чао!\nЗдесь проводятся гонки Чао!", 0 } ,
 	{ 0 }
 };
 
-HintText_Text AboutChaoRace[] = {
+HintMessageString AboutChaoRace[] = {
 	{ "\a'Гонки Чао'", 0 },
 	{ "\aЗдесь Чао состязаются между собой,\nприменяя развитые умения!", 0 },
 	{ "\aЕсли занять первое место\nв Гонке сокровищ,", 0 },
@@ -471,55 +471,55 @@ void LoadTikalHintsForBosses()
 {
 	// Chaos 0 (when timer is 01:00:00)
 
-	WriteData((HintText_Text*)0x7FD51C, { "\aДля самонаводящейся атаки\nдважды нажми кнопку прыжка!", 180 });
-	WriteData((HintText_Text*)0x7FD56C, { "\aЦелься в уязвимую точку\nна голове.", 120 });
+	WriteData((HintMessageString*)0x7FD51C, { "\aДля самонаводящейся атаки\nдважды нажми кнопку прыжка!", 180 });
+	WriteData((HintMessageString*)0x7FD56C, { "\aЦелься в уязвимую точку\nна голове.", 120 });
 
 	// Chaos 2
 
-	WriteData((HintText_Text*)0x7FD960, { "\aЦелься в голову Хаоса,\nкогда он откроется!", 180 });
-	WriteData((HintText_Text*)0x7FD9B0, { "\aСпланируй в него или ударь\nв прыжке вместо ударов кулаками.", 180 });
-	WriteData((HintText_Text*)0x7FDA00, { "\aТы можешь отбить кулаком\nмаленькие водяные шарики!", 180 });
+	WriteData((HintMessageString*)0x7FD960, { "\aЦелься в голову Хаоса,\nкогда он откроется!", 180 });
+	WriteData((HintMessageString*)0x7FD9B0, { "\aСпланируй в него или ударь\nв прыжке вместо ударов кулаками.", 180 });
+	WriteData((HintMessageString*)0x7FDA00, { "\aТы можешь отбить кулаком\nмаленькие водяные шарики!", 180 });
 
 	// Chaos 4
 
-	WriteData((HintText_Text*)0x7FE450, { "\aУ тебя будет шанс ударить,\nкогда Хаос высунет свою голову.", 150 });
+	WriteData((HintMessageString*)0x7FE450, { "\aУ тебя будет шанс ударить,\nкогда Хаос высунет свою голову.", 150 });
 
 	// Chaos 6
 
-	WriteData((HintText_Text*)0x7FEBA0, { "\aЗаморозить бы Хаоса...\nПридумай, как это сделать.", 180 });
-	WriteData((HintText_Text*)0x7FEBF8, { "\aКидай бомбы Эггмана\nпрямо в пасть Хаоса.", 180 });
+	WriteData((HintMessageString*)0x7FEBA0, { "\aЗаморозить бы Хаоса...\nПридумай, как это сделать.", 180 });
+	WriteData((HintMessageString*)0x7FEBF8, { "\aКидай бомбы Эггмана\nпрямо в пасть Хаоса.", 180 });
 
-	WriteData((HintText_Text*)0x7FEC48, { "\aПрицелься в лягушку\nи закинь в неё наживку!", 180 });
+	WriteData((HintMessageString*)0x7FEC48, { "\aПрицелься в лягушку\nи закинь в неё наживку!", 180 });
 
-	WriteData((HintText_Text*)0x7FECA8, { "\aУ тебя появится возможность\nиспользовать удочку,", 120 });
-	WriteData((HintText_Text*)0x7FECB0, { "\aкогда Хаос подойдёт ближе!", 180 });
+	WriteData((HintMessageString*)0x7FECA8, { "\aУ тебя появится возможность\nиспользовать удочку,", 120 });
+	WriteData((HintMessageString*)0x7FECB0, { "\aкогда Хаос подойдёт ближе!", 180 });
 
 	// Egg Hornet
 
-	WriteData((HintText_Text*)0x801D54, { "\aЭгг-Мобиль – его слабое место.\nАтакуй, когда подберёшься ближе.", 250 });
+	WriteData((HintMessageString*)0x801D54, { "\aЭгг-Мобиль – его слабое место.\nАтакуй, когда подберёшься ближе.", 250 });
 
 	// Egg Walker	
 
-	WriteData((HintText_Text*)0x802D00, { "\aЧтобы он потерял равновесие,\nметь ему в ноги.", 120 });
-	WriteData((HintText_Text*)0x802D10, { "\aБей не только по ногам.\nАтакуй ещё и кабину!", 120 });
+	WriteData((HintMessageString*)0x802D00, { "\aЧтобы он потерял равновесие,\nметь ему в ноги.", 120 });
+	WriteData((HintMessageString*)0x802D10, { "\aБей не только по ногам.\nАтакуй ещё и кабину!", 120 });
 
 	// Egg Viper
 
-	WriteData((HintText_Text*)0x803444, { "\aЭггман на той стороне\nконцентрирует энергию...", 120 });
-	WriteData((HintText_Text*)0x803454, { "\aДоберись до него, используя\nСамонаводящуюся атаку...", 120 });
-	WriteData((HintText_Text*)0x803464, { "\a...и бей в кабину!", 120 });
-	WriteData((HintText_Text*)0x803474, { "\aЗапрыгни на эти детали\nи доберись до кабины.", 300 });
-	WriteData((HintText_Text*)0x803484, { "\aБерегись! Он что-то задумал!", 120 });
+	WriteData((HintMessageString*)0x803444, { "\aЭггман на той стороне\nконцентрирует энергию...", 120 });
+	WriteData((HintMessageString*)0x803454, { "\aДоберись до него, используя\nСамонаводящуюся атаку...", 120 });
+	WriteData((HintMessageString*)0x803464, { "\a...и бей в кабину!", 120 });
+	WriteData((HintMessageString*)0x803474, { "\aЗапрыгни на эти детали\nи доберись до кабины.", 300 });
+	WriteData((HintMessageString*)0x803484, { "\aБерегись! Он что-то задумал!", 120 });
 
 	// ZERO (when timer is 01:00:00)
 
-	WriteData((HintText_Text*)0x8046E4, { "\aУ него должно быть слабое место.", 120 });
-	WriteData((HintText_Text*)0x8046EC, { "\aПродолжай атаковать,\nпока не найдёшь его!", 160 });
+	WriteData((HintMessageString*)0x8046E4, { "\aУ него должно быть слабое место.", 120 });
+	WriteData((HintMessageString*)0x8046EC, { "\aПродолжай атаковать,\nпока не найдёшь его!", 160 });
 
 	// Perfect Chaos
 
-	WriteData((HintText_Text*)0x800544, { "\aНа максимальной скорости\nты станешь подобен молнии.", 240 });
-	WriteData((HintText_Text*)0x80054C, { "\aТолько так у тебя будет шанс\nатаковать Хаоса!", 120 });
+	WriteData((HintMessageString*)0x800544, { "\aНа максимальной скорости\nты станешь подобен молнии.", 240 });
+	WriteData((HintMessageString*)0x80054C, { "\aТолько так у тебя будет шанс\nатаковать Хаоса!", 120 });
 }
 
 
@@ -559,21 +559,21 @@ void LoadGameGearStuff()
 
 void LoadDCChaoGardenText()
 {
-	WriteData((HintText_Text*)0x880DE0, AboutChaoGarden);
-	WriteData((HintText_Text*)0x880DF8, AboutChaoEggs);
-	WriteData((HintText_Text*)0x880E20, AboutLittleAnimals);
-	WriteData((HintText_Text*)0x880E38, AboutFeedingBreedingEtc);
-	WriteData((HintText_Text*)0x880EB0, AboutWarphole);
-	WriteData((HintText_Text*)0x880ED8, AboutNameMachine);
-	WriteData((HintText_Text*)0x880F00, AboutChaoStadium);
-	WriteData((HintText_Text*)0x887B88, AboutChaoRace);
+	WriteData((HintMessageString*)0x880DE0, AboutChaoGarden);
+	WriteData((HintMessageString*)0x880DF8, AboutChaoEggs);
+	WriteData((HintMessageString*)0x880E20, AboutLittleAnimals);
+	WriteData((HintMessageString*)0x880E38, AboutFeedingBreedingEtc);
+	WriteData((HintMessageString*)0x880EB0, AboutWarphole);
+	WriteData((HintMessageString*)0x880ED8, AboutNameMachine);
+	WriteData((HintMessageString*)0x880F00, AboutChaoStadium);
+	WriteData((HintMessageString*)0x887B88, AboutChaoRace);
 }
 
 
 void LoadOtherText()
 {
 	// Tikal's hint for hunting stages
-	WriteData((HintText_Text*)0x88C730, { "\aДавай за мной!", 60 });
+	WriteData((HintMessageString*)0x88C730, { "\aДавай за мной!", 60 });
 	
 	// New lure messages
 	WriteData((const char**)0x9818A0, "\aНовая наживка!");
