@@ -168,9 +168,9 @@ void ev001D_s_afterchaos6(int state)
 			EV_SetPos(player, -217.33f, 748.34003f, -350.01001f);
 			EV_ClrAction(player);
 			EV_PlayPad(0, &EV001D_S_JUMP);
-			EV_Wait(60);
+			EV_Wait(50);
 			EV_CameraTargetFree();
-			EV_Wait(40);
+			EV_Wait(10);
 			if (!TweakedCutscenesConfig::SkipSecondJump)
 			{
 				//delete_eggmoble();
@@ -366,7 +366,7 @@ void ev001D_s_afterchaos6(int state)
 			EV_SetPos(player, -217.33f, 748.34003f, -350.01001f);
 			EV_ClrAction(player);
 			EV_PlayPad(0, &EV001D_S_JUMP);
-			EV_Wait(60);
+			EV_Wait(50);
 			EV_CameraTargetFree();
 			EV_CameraPos(0, 0, -447.75f, 635.0f, -436.70001f);
 			EV_CameraAng(0, 0, 0xDCF8, 0x3180, 0);
