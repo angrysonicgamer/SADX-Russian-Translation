@@ -311,11 +311,11 @@ void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 		ReplaceTex("ADVSS00", "ss_kanban4", "config\\objTex\\advss00", "ss_kanban4", 17, 64, 64);
 		ReplaceTex("ADVSS00", "st1_1", "config\\objTex\\advss00", "st1_1", 16, 64, 64);
 
-		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02_dc", 169, 128, 128);
+		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02", 169, 128, 128);
 	}
 	else
 	{
-		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02", 169, 128, 128);
+		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02_dc", 169, 128, 128);
 	}
 
 	ReplaceTex("ADVSS03", "du64pos01", "config\\objTex\\advss00", "du64pos01", 206020, 64, 64);
