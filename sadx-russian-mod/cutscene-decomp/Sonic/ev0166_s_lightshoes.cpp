@@ -21,7 +21,7 @@ void ev0166_s_lightshoes(int state)
 		EV_Wait(1);
 		if (DreamcastConversionConfig::EnableStationSquare)
 			{
-				EV_SetPos(player, 505.0f, -91.900002f, 860.0f);
+				EV_SetPos(player, 505.0f, -91.900002f, 800.0f);
 			}		
 		else
 		{

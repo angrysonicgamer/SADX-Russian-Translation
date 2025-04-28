@@ -7,6 +7,7 @@
 #include "IniFile.hpp"
 #include <fstream>
 #include "..\Other Mods\TweakedCutscenesConfig.h"
+#include "..\Other Mods\DreamcastConversionConfig.h"
 
 
 // Warning messages
@@ -82,6 +83,7 @@ void InitCustomCutsceneTimings(const char* path, const HelperFunctions& helperFu
 		else 
 		{
 			TweakedCutscenesConfig::Read(helperFunctions);
+			DreamcastConversionConfig::Read(helperFunctions);
 			SetCustomCutsceneTimings(path, helperFunctions);
 		}				
 	}
