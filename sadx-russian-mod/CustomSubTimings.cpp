@@ -3,8 +3,6 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventList.h"
 #include "SADXEventVariables.h"
-#include "LoadedMods.h"
-#include "ModConfig.h"
 
 
 void SetCustomCutsceneTimings(const char* path, const HelperFunctions& helperFunctions)
