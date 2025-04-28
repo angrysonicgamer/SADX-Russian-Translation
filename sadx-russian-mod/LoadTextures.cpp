@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "LoadedMods.h"
+#include "Other Mods/DreamcastConversionConfig.h"
 #include "ModConfig.h"
 
 
@@ -294,29 +295,32 @@ void LoadDreamcastChaoIcon(const char* path, const HelperFunctions& helperFuncti
 
 void LoadObjTex(const char* path, const HelperFunctions& helperFunctions)
 {
+	DreamcastConversionConfig::Read(helperFunctions);
+
 	ReplaceTex("ADVSS00", "du64pos01", "config\\objTex\\advss00", "du64pos01", 108, 64, 64);
 	ReplaceTex("ADVSS00", "du64pos04", "config\\objTex\\advss00", "du64pos04", 103, 64, 64);
 	ReplaceTex("ADVSS00", "mark_cityoffice", "config\\objTex\\advss00", "mark_cityoffice", 116, 64, 64);
-	ReplaceTex("ADVSS00", "ss_kanban3", "config\\objTex\\advss00", "ss_kanban3", 15, 64, 64);
-	ReplaceTex("ADVSS00", "ss_kanban4", "config\\objTex\\advss00", "ss_kanban4", 17, 64, 64);
-	ReplaceTex("ADVSS00", "st1_1", "config\\objTex\\advss00", "st1_1", 16, 64, 64);
-	
+		
 	ReplaceTex("ADVSS01", "chaoinspace", "config\\objTex\\advss01", "chaoinspace", 209, 128, 128);
 	ReplaceTex("ADVSS01", "casinom_kanban", "config\\objTex\\advss01", "casinom_kanban", 169, 128, 128);
 	ReplaceTex("ADVSS01", "denkou", "config\\objTex\\advss01", "denkou", 218, 128, 128);
 
-	if (LoadedMods::DreamcastConversion)
+	if (!DreamcastConversionConfig::EnableStationSquare)
 	{
+		ReplaceTex("ADVSS00", "ss_kanban3", "config\\objTex\\advss00", "ss_kanban3", 15, 64, 64);
+		ReplaceTex("ADVSS00", "ss_kanban4", "config\\objTex\\advss00", "ss_kanban4", 17, 64, 64);
+		ReplaceTex("ADVSS00", "st1_1", "config\\objTex\\advss00", "st1_1", 16, 64, 64);
+
 		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02_dc", 169, 128, 128);
 	}
 	else
 	{
 		ReplaceTex("ADVSS03", "ekiname02", "config\\objTex\\advss03", "ekiname02", 169, 128, 128);
 	}
+
+	ReplaceTex("ADVSS03", "du64pos01", "config\\objTex\\advss00", "du64pos01", 206020, 64, 64);
 	ReplaceTex("ADVSS03", "oda_ekiname02", "config\\objTex\\advss03", "oda_ekiname02", 151, 128, 128);
 	ReplaceTex("ADVSS03", "oda_ss_pos01", "config\\objTex\\advss00", "du64pos01", 109, 64, 64);
-	if (LoadedMods::DreamcastConversion)
-		ReplaceTex("ADVSS03", "du64pos01", "config\\objTex\\advss00", "du64pos01", 206020, 64, 64);
 	ReplaceTex("ADVSS03", "oda_ss_tex20", "config\\objTex\\advss03", "oda_ss_tex20", 57, 128, 128);
 	ReplaceTex("ADVSS03", "ss_kiosk10", "config\\objTex\\advss03", "ss_kiosk10", 167, 64, 64);
 	ReplaceTex("ADVSS03", "ss_tex_60", "config\\objTex\\advss03", "ss_tex_60", 36, 128, 128);
